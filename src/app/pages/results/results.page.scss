@@ -1,0 +1,35 @@
+ion-content {
+    --ion-background-color: white;
+    --ion-text-decoration: none;
+    --ion-text-color: black;
+  }
+  ion-toolbar {
+    --background: #83bbd2;
+  }
+  .container {
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    top: 40%;
+    transform: translateY(-50%);
+    --ion-text-color: black;
+  }
+  ion-button {
+    color: black;
+    --background: #9acad8;
+    border-radius: 8px;
+    margin: 5rem 0rem 0rem 0rem;
+  }
+  .grid {
+    margin: 5rem 0rem 0rem 0rem;
+  }
+  ion-progress-bar {
+    height: 10px;
+    width: 68%;
+    margin: 0rem 0rem 0rem 4rem;
+    --background-color: #9db0b7;
+    border-radius: 8px;
+    --progress-background: #ae8274;
+  }
+  

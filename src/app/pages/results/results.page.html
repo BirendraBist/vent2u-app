@@ -1,0 +1,43 @@
+<ion-content [fullscreen]="true">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref=""></ion-back-button>
+      </ion-buttons>
+      <ion-title> results</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div class="container">
+    <div>
+      <ion-text>
+        <h5>Thank you for answering</h5>
+      </ion-text>
+    </div>
+    <div>
+      <ion-text> 5 people in the zone </ion-text>
+    </div>
+    <div class="grid">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <p>60% agree the temperature is too cold</p>
+            <ion-progress-bar value="0.6"></ion-progress-bar>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <p>80% disagree that humidity is too low</p>
+            <ion-progress-bar value="0.8"></ion-progress-bar>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <p>60% think the air quality is good</p>
+            <ion-progress-bar value="0.6"></ion-progress-bar>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+    <ion-button routerLink="/countdown">Done</ion-button>
+  </div>
+</ion-content>
