@@ -26,6 +26,14 @@ const routes: Routes = [
     loadChildren: () => import('./pages/countdown/countdown.module').then(m => m.CountdownPageModule)
 
   },
+  {
+    path: 'rooms',
+    loadChildren: () => import('./pages/rooms/rooms.module').then( m => m.RoomsPageModule)
+  },
+  {
+    path: 'zones',
+    loadChildren: () => import('./pages/zones/zones.module').then( m => m.ZonesPageModule)
+  },
 ];
 
 @NgModule({

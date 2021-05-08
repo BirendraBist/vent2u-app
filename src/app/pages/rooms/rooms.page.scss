@@ -1,0 +1,25 @@
+ion-toolbar{    
+    --background: #83BBD2;
+}
+ion-item{
+    padding: .5rem;
+    --background: #D9ECF2;
+    border-radius: 8px;
+}
+ion-searchbar{
+    padding: 3rem;
+--background: #FFFFFF;
+box-sizing: border-box;
+border-radius: 8px;
+}
+ion-button{
+--background:#9ACAD8;
+border-radius: 8px;
+margin-top: 2rem;
+margin-left: 6rem;
+color: #000;
+}
+ion-searchbar{
+--background: #FFFFFF;
+--cancel-button-color: #000;
+}

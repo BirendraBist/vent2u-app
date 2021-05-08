@@ -1,0 +1,23 @@
+ion-toolbar{    
+    --background: #83BBD2;
+}
+ion-item{ padding: .5rem;
+    --background: #D9ECF2;
+    border-radius: 8px;
+
+}
+ion-button{
+    --background:#9ACAD8;
+    border-radius: 8px;
+    margin-top: 2rem;
+    margin-left: 6rem;
+    color: #000;
+    }
+    .div{
+        align-self: center;
+    }
+    ion-text{
+        margin-left: 3rem;
+        font-size: smaller;
+        
+    }
