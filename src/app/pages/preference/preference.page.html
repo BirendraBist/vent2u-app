@@ -1,0 +1,63 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref=""></ion-back-button>
+    </ion-buttons>
+    <ion-title> Prefereance</ion-title>
+  </ion-toolbar>
+</ion-header>
+<div class="info-text">
+  <h5>
+    please select the temperature
+    humidity and air flow according
+    to your preferance.
+  </h5>
+</div>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <img src="/assets/temp.png">
+      <h3>Temperature</h3>
+    </ion-row>
+    <ion-row class="temprange">
+      <ion-range min="15" max="30" snaps="true" pin name="Temperature">
+        <p slot="start">cold</p>
+        <p slot="end">Hot</p>
+      </ion-range>
+    </ion-row>
+
+
+
+
+    <ion-row>
+      <img src="/assets/humidity.png">
+      <h3>Humidity</h3>
+    </ion-row>
+    <ion-row>
+      <ion-range min="20" max="60" snaps="true" step="5" pin name="Temperature">
+        <p slot="start">Dry</p>
+        <p slot="end">Moist</p>
+      </ion-range>
+    </ion-row>
+
+
+
+
+    <ion-row>
+      <img src="/assets/airquality.png">
+      <h3>Air speed</h3>
+
+    </ion-row>
+    <ion-row>
+      <ion-range min="0" max="10" snaps="true" pin name="humidity">
+        <p slot="start">slow</p>
+        <p slot="end">fast</p>
+      </ion-range>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-item>
+    <ion-button size="large" color="primary" shape="round" routerLink="/home">save</ion-button>
+  </ion-item>
+</ion-content>
