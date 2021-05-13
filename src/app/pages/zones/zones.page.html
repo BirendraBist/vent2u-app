@@ -1,3 +1,4 @@
+
   <ion-header>
     <ion-toolbar>
       <ion-buttons slot="start">
@@ -7,20 +8,21 @@
     </ion-toolbar>
   </ion-header>
   <ion-content [fullscreen]="true">
-    <div class="container">
-      <div class="div">
-        <img src="/assets/cold.png" />
-      </div>
-
-      <ion-grid>
-        <ion-row *ngFor="let z of zone" routerLink="/results">
-          <ion-col>
-            <ion-item> {{z.zoneName}}</ion-item>
-            <ion-text>5 people</ion-text>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-      <ion-button>Take the quiz again</ion-button>
+  <div class="container">
+    <div class="div">
+      <img src="/assets/cold.png" />
     </div>
-  </ion-content>
 
+    <ion-grid>
+      <ion-row *ngFor="let z of zone" (click)="(z)">
+        <ion-col>
+          <ion-item> {{z.zoneName}}</ion-item>
+          <ion-text>5 people</ion-text>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-button routerLink="/results">for results page</ion-button>
+
+    <ion-button>Take the quiz again</ion-button>
+  </div>
+</ion-content>

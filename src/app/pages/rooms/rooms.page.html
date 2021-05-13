@@ -1,21 +1,29 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref=""></ion-back-button>
-    </ion-buttons>
-    <ion-title> select the room</ion-title>
-  </ion-toolbar>
-</ion-header>
-<ion-content [fullscreen]="true">
-  <div class="container">
-    <ion-searchbar placeholder="Search" clearIcon> </ion-searchbar>
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref=""></ion-back-button>
+      </ion-buttons>
+      <ion-title> select the room</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content [fullscreen]="true">
 
-    <ion-list class="room-list" *ngFor="let r of room;">
-      <ion-item routerLink="/zones" class="one">
+  <div class="container">
+    
+    <div class="searchbar">
+      <ion-searchbar placeholder="Search" clearIcon> </ion-searchbar>
+    </div>
+    
+    <ion-list *ngFor="let r of room;">
+      <ion-item-sliding>
+      <ion-item>  
         <ion-label>{{ r.roomName }}</ion-label>
         <ion-text>5 people</ion-text>
       </ion-item>
+    </ion-item-sliding>
+     
     </ion-list>
+    <ion-button routerLink="/zones">click for zones</ion-button>
     <ion-button>Take the quiz again</ion-button>
   </div>
 </ion-content>

@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+   <!-- Title and subtext for the top of the page-->
+
+   <h1>How do you feel?</h1>
+
+   <p>Below you find a couple of questions regarding the indoor climate in your classroom, 
+     please answer these if you want the indoor climate to change.
+     </p>
+ 
+     <!-- Slider with questions and buttons to answer-->
+   
+   <ion-slides [options]="option" class="slider" pager="true">
+     <ion-slide>
+       <ion-card class="card">
+         <ion-card-title class="card-title">Do you feel cold right now?</ion-card-title>
+         <img src="assets/coldB_1.svg">
+         <ion-button class="button">Agree</ion-button>
+         <ion-button class="button">Disagree</ion-button>
+       </ion-card>
+     </ion-slide>
+     <ion-slide>
+       <ion-card class="card">
+         <ion-card-title class="card-title">Do you think the room feels stuffy?</ion-card-title>
+         <img src="assets/coldB_1.svg">
+         <ion-button class="button">Agree</ion-button>
+         <ion-button class="button">Disagree</ion-button>
+       </ion-card>
+     </ion-slide>
+     <ion-slide>
+       <ion-card class="card">
+         <ion-card-title class="card-title">Do you think there is a bad odor in the room?</ion-card-title>
+         <img src="assets/coldB_1.svg">
+         <ion-button class="button">Agree</ion-button>
+         <ion-button class="button">Disagree</ion-button>
+       </ion-card>
+     </ion-slide>
+     <ion-slide>
+       <ion-card class="card">
+         <ion-card-title class="card-title">Do you feel warm right now?</ion-card-title>
+         <img src="assets/coldB_1.svg">
+         <ion-button class="button">Agree</ion-button>
+         <ion-button class="button">Disagree</ion-button>
+       </ion-card>
+     </ion-slide>
+   </ion-slides>
+
+   <!-- temporary button for the results page-->
+   <button routerLink="/results">for results page</button>
+
+</ion-content>
