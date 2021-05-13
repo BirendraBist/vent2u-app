@@ -1,0 +1,44 @@
+ion-toolbar {
+  --background: #83bbd2;
+}
+
+h2 {
+  text-align: center;
+  font-size: medium;
+  margin: 10px 10px 10px 10px;
+}
+
+ion-button {
+  margin: 10px 20px 10px 20px;
+}
+
+#tutorialTopPicture {
+  width: 342px;
+  height: 265px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #9acad8;
+  border-radius: 20px;
+  position: relative;
+}
+#tutorialTopPicture img {
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+}
+
+#questionHeaderText {
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+#tutorialAnswers ion-list-header {
+  text-align: center;
+  font-size: medium;
+}
+
+#tutorialAnswers ion-item {
+  border: 1px solid #000000;
+  border-radius: 6px;
+  margin: 10px 20px 10px 20px;
+}
