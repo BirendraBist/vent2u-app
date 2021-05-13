@@ -34,6 +34,11 @@ const routes: Routes = [
     path: 'zones',
     loadChildren: () => import('./pages/zones/zones.module').then( m => m.ZonesPageModule)
   },
+  {
+    path: 'preference',
+    loadChildren: () => import('./pages/preference/preference.module').then( m => m.PreferencePageModule)
+  },
+
 ];
 
 @NgModule({
