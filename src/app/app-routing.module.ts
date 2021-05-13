@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
 
@@ -34,6 +34,12 @@ const routes: Routes = [
     path: 'zones',
     loadChildren: () => import('./pages/zones/zones.module').then( m => m.ZonesPageModule)
   },
+  {
+    path: 'signup',
+    loadChildren: () => import('./pages/signup/signup.module').then( m => m.SignupPageModule)
+  },
+ 
+  
 ];
 
 @NgModule({

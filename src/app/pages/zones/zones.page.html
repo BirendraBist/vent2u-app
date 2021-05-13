@@ -1,46 +1,26 @@
-<ion-header >
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>Select the zone</ion-title>
-  </ion-toolbar>
-</ion-header>
-<div class="div">
-  <img src="/assets/cold.png" />
-</div>
-<ion-content>
-  <ion-grid>
-  <ion-row>
-    <ion-col size="5">
-      <ion-item class="third"> Zone 1</ion-item>
-      <ion-text>5 people</ion-text>
-    </ion-col>
-    
-    <ion-col size="5">
-      <ion-item class="four"> Zone 2</ion-item>
-      <ion-text>5 people</ion-text>
-    </ion-col>
-  </ion-row>
-    
-    <ion-row>
-      
-      <ion-col size="5">
-        <ion-item class="third"> Zone 3</ion-item>
-        <ion-text>5 people</ion-text>
-      </ion-col>
-      <ion-col size="5">
-        <ion-item class="four"> Zone 4
-       </ion-item>
-       <ion-text>5 people</ion-text>
-      </ion-col>
-      
-    </ion-row>
-  </ion-grid>
-  <ion-button routerLink="/results">for results page</ion-button>
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref=""></ion-back-button>
+      </ion-buttons>
+      <ion-title> select the zone</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content [fullscreen]="true">
+    <div class="container">
+      <div class="div">
+        <img src="/assets/cold.png" />
+      </div>
 
-  <ion-button>Take the quiz again</ion-button>
-</ion-content>
+      <ion-grid>
+        <ion-row *ngFor="let z of zone" routerLink="/results">
+          <ion-col>
+            <ion-item> {{z.zoneName}}</ion-item>
+            <ion-text>5 people</ion-text>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-button>Take the quiz again</ion-button>
+    </div>
+  </ion-content>
 
-
-   
