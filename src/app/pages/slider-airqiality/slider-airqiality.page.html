@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button icon="caret-back-outline" text="" defaultHref="preference" class="back"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+     <!-- Title and subtext for the top of the page-->
+
+     <h1>How do you feel?</h1>
+
+     <p>Move the slider according to how you feel and submit your answer.
+       </p>
+
+       <ion-card class="card">
+        <ion-card-title class="card-title">How bad do you think the air quality is?</ion-card-title>
+        <img src="assets/coldB_1.svg">
+          <ion-range min="1" max="10" pin="true" class="ion-range">
+            <ion-label slot="start">1</ion-label>
+            <ion-label slot="end">10</ion-label>
+          </ion-range>
+          <ion-button class="sumbit">Submit</ion-button>
+      </ion-card>
+
+
+</ion-content>

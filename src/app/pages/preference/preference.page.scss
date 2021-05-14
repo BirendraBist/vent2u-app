@@ -1,5 +1,7 @@
 /* the top bar which shows room and zone */
-
+ ion-toolbar{
+   --background: #9acad8;
+ }
   
   /* This is title and subtext */
   h1{
@@ -61,7 +63,14 @@
      margin-left: 10%;
   }
   
-  
+  .back{
+    --color: black;
+    --background: #9acad8;
+    --background-activated: none;
+    --background-hover: none;
+    font-size: 30px;
+    height: 40px;
+  }
   
   
   
