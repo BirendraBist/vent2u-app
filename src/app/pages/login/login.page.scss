@@ -1,19 +1,23 @@
 ion-content {
   --ion-background-color: white;
-  --ion-text-decoration: none;
   --ion-text-color: black;
 }
 ion-toolbar {
-  --background: #83bbd2;
+  --background: #83bbd3;
+  color: black;
 }
 .container {
+  padding: 1.5rem;
   text-align: center;
   position: absolute;
   left: 0;
   right: 0;
-  top: 40%;
+  top:45%;
   transform: translateY(-50%);
   --ion-text-color: black;
+}
+ion-row{
+  margin-top: 10px;
 }
 ion-item {
   --background: #d9ecf2;
@@ -28,4 +32,11 @@ ion-button {
   --background: #9acad8;
   border-radius: 8px;
   color: black;
+}
+.info-text{
+padding: 2rem;
+}
+
+ion-button:hover{
+  --background: #80cbc4;
 }

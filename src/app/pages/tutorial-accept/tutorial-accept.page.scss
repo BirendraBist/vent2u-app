@@ -1,0 +1,35 @@
+ion-toolbar {
+  --background: #83bbd2;
+}
+
+#tutorialAcceptImgcontainer {
+  width: 308px;
+  height: 510px;
+  background: #9acad8;
+  border-radius: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+#tutorialAcceptImgcontainer p {
+  font-size: large;
+  padding: 30px;
+}
+
+#tutorialAcceptImgcontainer img {
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+}
+
+#tutorialAcceptButtons {
+  display: flex;
+  justify-content: space-evenly;
+}
+ion-button {
+  width: 145px;
+  height: 60px;
+  font-size: large;
+  margin: 10px;
+}

@@ -1,0 +1,30 @@
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <ion-grid>
+      <ion-row class="padding-top-50">
+        <ion-col>
+          <strong>Create Account</strong>
+        </ion-col>
+      </ion-row>
+      <ion-row class="padding-top-50">
+        <ion-col>
+          <ion-label><small>Username</small></ion-label>
+          <ion-input [(ngModel)]="userName" placeholder="Enter your new username here" type="text" required></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row class="padding-top-25">
+        <ion-col>
+          <ion-label><small>Create password</small></ion-label>
+          <ion-input [(ngModel)]="password" placeholder="Enter new password here" type="password" required></ion-input>
+        </ion-col>
+      </ion-row>
+     
+      
+      <ion-row class="padding-top-50">
+        <ion-col>
+          <ion-button (click)="createUser()" expand="block">Create</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
