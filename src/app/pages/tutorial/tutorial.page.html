@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref=""></ion-back-button>
+    </ion-buttons>
+    <ion-title> Tutorial</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <h5>
+      The ventilator uses cold air. <br />
+      What can you do to prevent getting cold ?
+    </h5>
+    <div id="tutorialTopPicture">
+      <img src="assets/cold.png" alt="feeling cold" />
+    </div>
+    <p id="questionHeaderText">Pick all answers that apply</p>
+    <ion-list  lines="none">
+      <ion-item *ngFor="let entry of tutorialQuestions">
+        <ion-label>{{entry.text}}</ion-label>
+        <ion-checkbox  slot="start"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+    <ion-button  routerLink="/rooms">Check answers</ion-button>
+  </div>
+</ion-content>

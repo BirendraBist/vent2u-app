@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { RoomService } from '../../services/room.service';
+import { Room } from '../../models/room.model';
+
 
 @Component({
   selector: 'app-rooms',
@@ -6,10 +9,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./rooms.page.scss'],
 })
 export class RoomsPage implements OnInit {
+  room: Room[];
 
-  constructor() { }
+  constructor(
+    private roomService: RoomService
 
-  ngOnInit() {
+  ) { }
+  ngOnInit(): void {
+    this.retrieveRooms();
+  }
+
+  retrieveRooms(): void {
+    this.roomService.getAll()
+      .subscribe(
+        data => {
+          this.room = data;
+          console.log(data);
+        },
+        error => {
+          console.log(error);
+        });
+
+
   }
 
 }

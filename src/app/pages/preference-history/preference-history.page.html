@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Preference History</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <div class="info-text"><h5>History List</h5></div>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-card *ngFor="let pH of prfceHistory">
+            <ion-item>
+              <ion-label>cold<ion-label>{{pH.cold}}°c </ion-label> </ion-label>
+              <ion-label>warm<ion-label>{{pH.warm}}°c </ion-label> </ion-label>
+              <ion-label
+                >airflow<ion-label>{{pH.airFlow}}cfm </ion-label>
+              </ion-label>
+              <ion-label>dry<ion-label>{{pH.dry}}%</ion-label> </ion-label>
+              <ion-label>moist<ion-label>{{pH.moist}}% </ion-label> </ion-label>
+              <button class="btnUse" slot="end">use</button>
+              <ion-button fill="clear" slot="end"
+                ><ion-icon name="trash-outline"></ion-icon>
+              </ion-button>
+            </ion-item>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
