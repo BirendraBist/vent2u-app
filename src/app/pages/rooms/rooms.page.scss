@@ -30,6 +30,8 @@ ion-toolbar {
 }
 ion-list {
   background-color: white;
+  list-style-type: none;
+
 }
 ion-item {
   --background: #d9ecf2;
@@ -59,8 +61,5 @@ ion-searchbar:hover {
   --background: #80cbc4;
 }
 
-ion-item:active {
-  --background: #80cbc4;
-}
 
 

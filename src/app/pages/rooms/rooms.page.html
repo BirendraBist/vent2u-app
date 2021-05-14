@@ -12,7 +12,7 @@
       <ion-searchbar placeholder="Search" clearIcon> </ion-searchbar>
     </div>
 
-    <ion-list *ngFor="let r of room;">
+    <ion-list line="none" *ngFor="let r of room;">
       <ion-item routerLink="/zones">
         <ion-label>{{ r.roomName }}</ion-label>
         <ion-text>5 people</ion-text>

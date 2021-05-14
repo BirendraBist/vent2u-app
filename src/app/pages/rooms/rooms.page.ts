@@ -12,20 +12,18 @@ export class RoomsPage implements OnInit {
   room: Room[];
 
   constructor(
-    private roomservice: RoomService
-    
-  ) { }
- 
+    private roomService: RoomService
 
+  ) { }
   ngOnInit(): void {
     this.retrieveRooms();
   }
 
   retrieveRooms(): void {
-    this.roomservice.getAll()
+    this.roomService.getAll()
       .subscribe(
         data => {
-          this.room= data;
+          this.room = data;
           console.log(data);
         },
         error => {

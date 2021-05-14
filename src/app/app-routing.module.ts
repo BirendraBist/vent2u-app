@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'rooms',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
 
@@ -43,7 +43,7 @@ const routes: Routes = [
     path: 'tutorial-accept',
     loadChildren: () => import('./pages/tutorial-accept/tutorial-accept.module').then( m => m.TutorialAcceptPageModule)
   },
-
+{
 
     path: 'signup',
     loadChildren: () => import('./pages/signup/signup.module').then( m => m.SignupPageModule)
@@ -51,6 +51,10 @@ const routes: Routes = [
   {
     path: 'preference',
     loadChildren: () => import('./pages/preference/preference.module').then( m => m.PreferencePageModule)
+  },
+  {
+    path: 'preference-history',
+    loadChildren: () => import('./pages/preference-history/preference-history.module').then( m => m.PreferenceHistoryPageModule)
   },
  
   

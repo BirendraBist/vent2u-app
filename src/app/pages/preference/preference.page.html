@@ -1,6 +1,9 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title></ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref=""></ion-back-button>
+    </ion-buttons>
+    <ion-title> Preference SetUp</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -35,7 +38,7 @@
      </ion-slide>
      <ion-slide>
        <ion-card class="card">
-         <ion-card-title class="card-title">Do you think there is a bad odor in the room?</ion-card-title>
+         <ion-card-title class="card-title">Do you think bad odor in the room?</ion-card-title>
          <img src="assets/coldB_1.svg">
          <ion-button class="button">Agree</ion-button>
          <ion-button class="button">Disagree</ion-button>
@@ -52,6 +55,6 @@
    </ion-slides>
 
    <!-- temporary button for the results page-->
-   <button routerLink="/results">for results page</button>
+   <ion-button routerLink="/preference-history">for results page</ion-button>
 
 </ion-content>

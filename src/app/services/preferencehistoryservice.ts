@@ -1,24 +1,23 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Zone } from '../models/Zone.model';
-import { AuthConstants } from '../services/auth-constants';
+import { Preferencehistory } from '../models/peferencehistory.model';
+import { AuthConstants } from './auth-constants';
 
-//const baseUrl = 'http://localhost:8081/api/Zone';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ZoneService {
+export class PreferencehistoryService {
 
   constructor(private http: HttpClient) { }
 
-  getAll(): Observable<Zone[]> {
-    return this.http.get<Zone[]>(AuthConstants.DOMAIN + 'zone');
+  getAll(): Observable<Preferencehistory[]> {
+    return this.http.get<Preferencehistory[]>(AuthConstants.DOMAIN + 'userpreference');
   }
 
-  get(id: any): Observable<Zone> {
-    return this.http.get(`${AuthConstants.DOMAIN + 'zone'}/${id}`);
+  get(id: any): Observable<Preferencehistory> {
+    return this.http.get(`${AuthConstants.DOMAIN + 'userpreference'}/${id}`);
   }
 
   //   create(data: any): Observable<any> {
