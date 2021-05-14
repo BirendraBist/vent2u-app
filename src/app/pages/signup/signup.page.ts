@@ -12,16 +12,22 @@ import { AlertController } from '@ionic/angular';
 export class SignupPage implements OnInit {
   userName: String;
   password: String;
-
   constructor(
-    private httpClient: HttpClient,
+    private http: HttpClient,
     private router: Router,
-    public alertController: AlertController
-  ) {}
+    public alertCtrl: AlertController,
+  ) { }
+  signupUser() {
+    if (!this.userName || !this.password) {
+      this.presentNotification(
+        'please fill the above fields',
+        '',
+        ['ok']
+      );
+      return;
+    }
 
-  createUser() {
-    
-       this.httpClient
+    this.http
       .post(
         AuthConstants.DOMAIN + 'user',
         {
@@ -32,44 +38,46 @@ export class SignupPage implements OnInit {
       )
       .subscribe(
         (resp) => {
-          if (resp.status == 200 || resp.status == 204) {
-            this.handleCreation();
+          if (resp.status == 200) {
+            this.presentNotification(
+              '😊 Super ',
+              'Now you can sign in...  ',
+              ["OK"]
+            );
+            this.router.navigate(['/login']);
+
           }
         },
         (err) => {
           console.log('error', err);
+
         }
       );
   }
-
-  
-
   async presentNotification(
     header: string,
     message: string,
     buttons: string[]
   ) {
-    const alert = await this.alertController.create({
+    const alert = await this.alertCtrl.create({
       header: header,
       message: message,
       buttons: buttons,
     });
-
     await alert.present();
     let result = await alert.onDidDismiss();
     console.log(result);
   }
+  // async handleCreation() {
+  //   await this.presentNotification(
+  //     '😊 Super ',
+  //     'Now you can sign in...  ',
+  //     ["OK"]
+  //   );
+  //   this.router.navigate(['/login']);
+  // }
+  async handleFailuer() {
 
-  async handleCreation() {
-    await this.presentNotification(
-      'Success',
-      'Your account has been created. Now you can log in.',
-      ["Let's go"]
-    );
-    this.router.navigate(['login']);
   }
-
-  async handlerFailuer() {}
-
-  ngOnInit() {}
+  ngOnInit() { }
 }
