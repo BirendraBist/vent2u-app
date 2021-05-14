@@ -38,6 +38,28 @@ const routes: Routes = [
     path: 'preference',
     loadChildren: () => import('./pages/preference/preference.module').then( m => m.PreferencePageModule)
   },
+  {
+    path: 'slider-cold',
+    loadChildren: () => import('./pages/slider-cold/slider-cold.module').then( m => m.SliderColdPageModule)
+  },
+  {
+    path: 'slider-airqiality',
+    loadChildren: () => import('./pages/slider-airqiality/slider-airqiality.module').then( m => m.SliderAirqialityPageModule)
+  },
+  {
+    path: 'slider-warm',
+    loadChildren: () => import('./pages/slider-warm/slider-warm.module').then( m => m.SliderWarmPageModule)
+  },
+  {
+    path: 'slider-moist',
+    loadChildren: () => import('./pages/slider-moist/slider-moist.module').then( m => m.SliderMoistPageModule)
+  },
+  {
+    path: 'slider-dry',
+    loadChildren: () => import('./pages/slider-dry/slider-dry.module').then( m => m.SliderDryPageModule)
+  },
+
+
 
 ];
 
