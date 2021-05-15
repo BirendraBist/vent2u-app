@@ -16,12 +16,14 @@
   <ion-grid>
   <ion-row>
     <ion-col size="5">
-      <ion-item class="third"> Zone 1</ion-item>
+      <ion-item class="third"
+         (click)="presentPopover($event)">Zone 1
+      </ion-item>
       <ion-text>5 people</ion-text>
     </ion-col>
     
     <ion-col size="5">
-      <ion-item class="four"> Zone 2</ion-item>
+      <ion-item class="four" (click)="presentPopover($event)">Zone 2</ion-item>
       <ion-text>5 people</ion-text>
     </ion-col>
   </ion-row>
@@ -29,11 +31,13 @@
     <ion-row>
       
       <ion-col size="5">
-        <ion-item class="third"> Zone 3</ion-item>
+        <ion-item class="third"
+         (click)="presentPopover($event)">Zone 3
+          </ion-item>
         <ion-text>5 people</ion-text>
       </ion-col>
       <ion-col size="5">
-        <ion-item class="four"> Zone 4
+        <ion-item class="four" (click)="presentPopover($event)">Zone 4
        </ion-item>
        <ion-text>5 people</ion-text>
       </ion-col>
