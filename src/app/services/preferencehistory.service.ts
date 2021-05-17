@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Preferencehistory } from '../models/peferencehistory.model';
-import { AuthConstants } from './auth-constants';
+import { AuthConstant } from './auth-constant';
 
 
 @Injectable({
@@ -13,11 +13,11 @@ export class PreferencehistoryService {
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<Preferencehistory[]> {
-    return this.http.get<Preferencehistory[]>(AuthConstants.DOMAIN + 'userpreference');
+    return this.http.get<Preferencehistory[]>(AuthConstant.DOMAIN + 'userpreference');
   }
 
   get(id: any): Observable<Preferencehistory> {
-    return this.http.get(`${AuthConstants.DOMAIN + 'userpreference'}/${id}`);
+    return this.http.get(`${AuthConstant.DOMAIN + 'userpreference'}/${id}`);
   }
 
   //   create(data: any): Observable<any> {

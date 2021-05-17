@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 })
 export class ZonesPage implements OnInit {
   zone: Zone[];
+  id:any;
 
   constructor(
     private zoneservice: ZoneService, router: Router, http: HttpClient

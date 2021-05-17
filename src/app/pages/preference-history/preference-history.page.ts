@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PreferencehistoryService } from '../../services/preferencehistoryservice';
+import { PreferencehistoryService } from '../../services/preferencehistory.service';
 import { Preferencehistory } from '../../models/peferencehistory.model';
 
 @Component({

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { AuthConstants } from '../../services/auth-constants';
+import { AuthConstant } from '../../services/auth-constant';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 
@@ -29,7 +29,7 @@ export class SignupPage implements OnInit {
 
     this.http
       .post(
-        AuthConstants.DOMAIN + 'user',
+        AuthConstant.DOMAIN + 'user',
         {
           userName: this.userName,
           password: this.password,
