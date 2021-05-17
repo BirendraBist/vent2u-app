@@ -1,4 +1,14 @@
 /* the top bar which shows room and zone */
+
+ion-content {
+  --ion-background-color: white;
+  --ion-text-color: black;
+}
+ion-toolbar {
+  --background: #83bbd3;
+  color: black;
+}
+
  ion-toolbar{
    --background: #9acad8;
  }
@@ -22,11 +32,15 @@
     padding-top: 10%;
     padding-left: 10px;
     padding-right: 10px;
+    color: black;
+  font-weight: bold;
+  font-size: medium;
   }
   .card{
     width: 90%;
     border-radius: 5%;
     box-shadow: none;
+    background: white;
   }
   .button{
     --background: #9DB0B7;
@@ -52,7 +66,7 @@
   
   /* progressbar/bullets */
   .slider{
-    --bullet-background: #9DB0B7;
+    --bullet-background: #9ACAD8;
     --bullet-background-active: #D9ECF2;
   
   }
@@ -61,6 +75,9 @@
       height: 30px;
       background-color: #9ACAD8;
      margin-left: 10%;
+  }
+  ion-button:hover {
+    --background: #80cbc4;
   }
   
   .back{

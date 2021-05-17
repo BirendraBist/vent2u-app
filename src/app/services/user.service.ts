@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { AuthConstants } from './auth-constants';
+import { AuthConstant } from './auth-constant';
 import { Observable } from 'rxjs';
 import { User } from '../models/user.model';
 
@@ -10,17 +10,17 @@ import { User } from '../models/user.model';
     providedIn: 'root'
 })
 export class UserService {
-    constructor(private http: HttpClient, authConstants: AuthConstants) { }
+    constructor(private http: HttpClient) { }
 
 
     getAll(): Observable<User[]> {
-        return this.http.get<User[]>(AuthConstants.DOMAIN + 'user');
+        return this.http.get<User[]>(AuthConstant.DOMAIN + 'user');
     }
 
     get(id: any): Observable<User> {
-        return this.http.get(`${AuthConstants.DOMAIN + 'user'}/${id}`);
+        return this.http.get(`${AuthConstant.DOMAIN + 'user'}/${id}`);
     }
     create(data: any): Observable<User> {
-        return this.http.post(AuthConstants.DOMAIN + 'user', data);
+        return this.http.post(AuthConstant.DOMAIN + 'user', data);
     }
 }

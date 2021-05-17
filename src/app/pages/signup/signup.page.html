@@ -1,30 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>SignUp</ion-title>
+  </ion-toolbar>
+</ion-header>
 <ion-content [fullscreen]="true">
-  <div id="container">
+  <div class="container">
+    <div>
+      <ion-text> <h5>CREATE YOUR ACCOUNT HERE !!</h5> </ion-text>
+    </div>
     <ion-grid>
-      <ion-row class="padding-top-50">
+      <ion-row>
         <ion-col>
-          <strong>Create Account</strong>
+          <ion-item>
+            <ion-icon name="person"></ion-icon>
+            <ion-input
+              placeholder="xxxx@edu.easj.dk"
+              type="text"
+              [(ngModel)]="userName"
+              required
+              name="first"
+            ></ion-input>
+          </ion-item>
         </ion-col>
       </ion-row>
-      <ion-row class="padding-top-50">
+      <ion-row>
         <ion-col>
-          <ion-label><small>Username</small></ion-label>
-          <ion-input [(ngModel)]="userName" placeholder="Enter your new username here" type="text" required></ion-input>
+          <ion-item>
+            <ion-icon name="lock-closed"></ion-icon>
+            <ion-input
+              placeholder="Password"
+              type="password"
+              [(ngModel)]="password"
+              required
+              name="first"
+            ></ion-input>
+          </ion-item>
         </ion-col>
       </ion-row>
-      <ion-row class="padding-top-25">
+      <ion-row>
         <ion-col>
-          <ion-label><small>Create password</small></ion-label>
-          <ion-input [(ngModel)]="password" placeholder="Enter new password here" type="password" required></ion-input>
+          <ion-button  (click)="signupUser()">SignUp</ion-button>
         </ion-col>
       </ion-row>
-     
-      
-      <ion-row class="padding-top-50">
-        <ion-col>
-          <ion-button (click)="createUser()" expand="block">Create</ion-button>
-        </ion-col>
-      </ion-row>
+      <div class="info-text">
+        <ion-text>
+          <p>Already have an account? <a routerLink="/login">login</a></p>
+        </ion-text>
+      </div>
     </ion-grid>
   </div>
 </ion-content>

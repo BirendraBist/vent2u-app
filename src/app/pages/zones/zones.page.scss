@@ -30,6 +30,7 @@ ion-button {
   border-radius: 8px;
   margin-top: 2rem;
   color: #000;
+  height: 3rem;
 }
 .div {
   align-self: center;
@@ -39,9 +40,7 @@ ion-button {
 ion-item:hover{
     --background: #80cbc4;
 }
-ion-item:active {
-  --background: #80cbc4;
-}
+
 ion-button:hover {
   --background: #80cbc4;
 }

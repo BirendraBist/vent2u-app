@@ -3,24 +3,26 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref=""></ion-back-button>
     </ion-buttons>
-    <ion-title> results</ion-title>
+    <ion-title> Tutorial</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <h2>
-    The ventilator uses cold air. <br />
-    What can you do to prevent getting cold ?
-  </h2>
-  <div id="tutorialTopPicture">
-    <img src="assets/cold.png" alt="feeling cold" />
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <h5>
+      The ventilator uses cold air. <br />
+      What can you do to prevent getting cold ?
+    </h5>
+    <div id="tutorialTopPicture">
+      <img src="assets/cold.png" alt="feeling cold" />
+    </div>
+    <p id="questionHeaderText">Pick all answers that apply</p>
+    <ion-list  lines="none">
+      <ion-item *ngFor="let entry of tutorialQuestions">
+        <ion-label>{{entry.text}}</ion-label>
+        <ion-checkbox  slot="start"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+    <ion-button  routerLink="/rooms">Check answers</ion-button>
   </div>
-  <p id="questionHeaderText">Pick all answers that apply</p>
-  <ion-list id="tutorialAnswers">
-    <ion-item *ngFor="let entry of tutorialQuestions">
-      <ion-label>{{entry.text}}</ion-label>
-      <ion-checkbox color="primary" slot="start"></ion-checkbox>
-    </ion-item>
-  </ion-list>
-  <ion-button expand="block" href="/rooms">Check answers</ion-button>
 </ion-content>

@@ -13,8 +13,7 @@ ion-toolbar {
   position: absolute;
   left: 0;
   right: 0;
-  top: 65%;
-  transform: translateY(-50%);
+  top: 5%;
   --ion-text-color: black;
 
   ion-searchbar {
@@ -30,6 +29,8 @@ ion-toolbar {
 }
 ion-list {
   background-color: white;
+  list-style-type: none;
+
 }
 ion-item {
   --background: #d9ecf2;
@@ -59,8 +60,5 @@ ion-searchbar:hover {
   --background: #80cbc4;
 }
 
-ion-item:active {
-  --background: #80cbc4;
-}
 
 

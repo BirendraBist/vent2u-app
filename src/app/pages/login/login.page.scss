@@ -12,7 +12,7 @@ ion-toolbar {
   position: absolute;
   left: 0;
   right: 0;
-  top:45%;
+  top:55%;
   transform: translateY(-50%);
   --ion-text-color: black;
 }
@@ -20,6 +20,7 @@ ion-row{
   margin-top: 10px;
 }
 ion-item {
+  
   --background: #d9ecf2;
   border-radius: 8px;
   --ion-text-color: black;
@@ -29,14 +30,20 @@ ion-icon {
   padding: 1%;
 }
 ion-button {
-  --background: #9acad8;
+--background: #9acad8;
   border-radius: 8px;
   color: black;
+  height: 3rem;
+  width: 8rem;
+  margin-top: 1.5rem;
 }
 .info-text{
-padding: 2rem;
+padding: 3rem;
 }
 
 ion-button:hover{
   --background: #80cbc4;
+}
+.alertClass {
+  --background: #e5e5e5;
 }

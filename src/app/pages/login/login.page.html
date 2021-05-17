@@ -1,12 +1,12 @@
 <ion-header>
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-back-button defaultHref=""></ion-back-button>
-      </ion-buttons>
-      <ion-title>login</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content [fullscreen]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
   <div class="container">
     <div>
       <ion-text> <h5>Login using your school account!!</h5> </ion-text>
@@ -16,7 +16,13 @@
         <ion-col>
           <ion-item>
             <ion-icon name="person"></ion-icon>
-            <ion-input placeholder="xxxx@edu.easj.dk" type="text"  required name="first"></ion-input>
+            <ion-input
+              placeholder="xxxx@edu.easj.dk"
+              type="text"
+              required
+              name="first"
+              [(ngModel)]="userName"
+            ></ion-input>
           </ion-item>
         </ion-col>
       </ion-row>
@@ -24,15 +30,24 @@
         <ion-col>
           <ion-item>
             <ion-icon name="lock-closed"></ion-icon>
-            <ion-input placeholder="Password" type="password" required name="first"></ion-input>
+            <ion-input
+              placeholder="Password"
+              type="password"
+              required
+              name="first"
+              [(ngModel)]="password"
+            ></ion-input>
           </ion-item>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-          <ion-button routerLink="/rooms">Login</ion-button>
+          <ion-button (click)="signinUser()">Login</ion-button>
         </ion-col>
       </ion-row>
+
+      <p>Not an account? <a routerLink="/signup">Signup now</a></p>
+
       <div class="info-text">
         <ion-text>
           <p>
