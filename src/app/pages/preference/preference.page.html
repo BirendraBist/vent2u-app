@@ -27,10 +27,52 @@
     classroom, please answer these if you want the indoor climate to change.
   </p>
 
+
+   <p>Below you find a couple of questions regarding the indoor climate in your classroom, 
+     please answer these if you want the indoor climate to change.
+     </p>
+ 
+     <!-- Slider with questions and buttons to answer-->
+   
+   <ion-slides [options]="option" class="slider" pager="true">
+     <ion-slide>
+       <ion-card class="card">
+         <ion-card-title class="card-title">Do you feel cold right now?</ion-card-title>
+         <img src="assets/coldB_1.svg">
+         <ion-button class="button" href="./slider-cold">Agree</ion-button>
+         <ion-button class="button" href="">Disagree</ion-button>
+       </ion-card>
+     </ion-slide>
+     <ion-slide>
+       <ion-card class="card">
+         <ion-card-title class="card-title">Do you think the air quality is bad?</ion-card-title>
+         <img src="assets/coldB_1.svg">
+         <ion-button class="button" href="slider-airqiality">Agree</ion-button>
+         <ion-button class="button">Disagree</ion-button>
+       </ion-card>
+     </ion-slide>
+     <ion-slide>
+       <ion-card class="card">
+         <ion-card-title class="card-title">Do you think the air is too dry?</ion-card-title>
+         <img src="assets/coldB_1.svg">
+         <ion-button class="button" href="slider-dry">Agree</ion-button>
+         <ion-button class="button">Disagree</ion-button>
+       </ion-card>
+     </ion-slide>
+     <ion-slide>
+       <ion-card class="card">
+         <ion-card-title class="card-title">Do you feel too warm right now?</ion-card-title>
+         <img src="assets/coldB_1.svg">
+         <ion-button class="button" href="slider-warm">Agree</ion-button>
+         <ion-button class="button">Disagree</ion-button>
+       </ion-card>
+     </ion-slide>
+     <ion-slide>
   <!-- Slider with questions and buttons to answer-->
 
   <ion-slides [options]="option" class="slider" pager="true">
     <ion-slide>
+
       <ion-card class="card">
         <ion-card-title class="card-title"
           >Do you feel cold right now?</ion-card-title
@@ -50,11 +92,16 @@
         <ion-button class="button">Disagree</ion-button>
       </ion-card>
     </ion-slide>
+
+     <br>
+   </ion-slides>
+
     <ion-slide>
       <ion-card class="card">
         <ion-card-title class="card-title"
           >Do you think the air is too dry?</ion-card-title
         >
+
 
         <img src="assets/coldB_1.svg" />
         <ion-button class="button" href="slider-dry">Agree</ion-button>
@@ -84,6 +131,15 @@
     <br />
   </ion-slides>
 
+   <ion-item>
+     <ion-range min="-200" max="200" color="secondary">
+        <ion-label slot="start">1</ion-label>
+        <ion-label slot="end">10</ion-label>
+  </ion-range>
+</ion-item>
+
+
   <!-- temporary button for the results page-->
   <ion-button routerLink="/preference-history">for results page</ion-button>
+
 </ion-content>
