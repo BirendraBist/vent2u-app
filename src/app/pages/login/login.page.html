@@ -21,6 +21,7 @@
               type="text"
               required
               name="first"
+              [(ngModel)]="userName"
             ></ion-input>
           </ion-item>
         </ion-col>
@@ -34,13 +35,14 @@
               type="password"
               required
               name="first"
+              [(ngModel)]="password"
             ></ion-input>
           </ion-item>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-          <ion-button routerLink="/tutorial-accept">Login</ion-button>
+          <ion-button (click)="signinUser()">Login</ion-button>
         </ion-col>
       </ion-row>
 

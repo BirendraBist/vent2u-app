@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { AuthConstants } from './../services/auth-constants';
+import { AuthConstant } from './auth-constant';
 
 @Injectable({
 providedIn: 'root'

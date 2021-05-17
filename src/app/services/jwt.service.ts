@@ -10,7 +10,6 @@ export class JwtService {
     try {
       return jwt_decode(token);
     } catch (Error) {
-      //TODO: Handle error
       return null;
     }
   }

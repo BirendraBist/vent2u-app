@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Zone } from '../models/Zone.model';
-import { AuthConstants } from '../services/auth-constants';
+import { AuthConstant} from './auth-constant';
 
 //const baseUrl = 'http://localhost:8081/api/Zone';
 
@@ -14,11 +14,11 @@ export class ZoneService {
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<Zone[]> {
-    return this.http.get<Zone[]>(AuthConstants.DOMAIN + 'zone');
+    return this.http.get<Zone[]>(AuthConstant.DOMAIN + 'zone');
   }
 
   get(id: any): Observable<Zone> {
-    return this.http.get(`${AuthConstants.DOMAIN + 'zone'}/${id}`);
+    return this.http.get(`${AuthConstant.DOMAIN + 'zone'}/${id}`);
   }
 
   //   create(data: any): Observable<any> {
