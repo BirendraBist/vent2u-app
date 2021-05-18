@@ -1,4 +1,102 @@
-<ion-header>
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <form [formGroup]="form" (ngSubmit)="login()">
+    <div>
+      <ion-text> <h5>Login using your school account!!</h5> </ion-text>
+    </div>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <div class="form-group">
+            <ion-icon name="person"></ion-icon>
+            <ion-input
+              placeholder="xxxx@edu.easj.dk"
+              type="text"
+              required
+              name="first"
+              class="form-control"
+              formControlName="username"
+            ></ion-input>
+            <div *ngIf="form.controls.username.touched 
+            && !form.controls.username.valid" class="alert alert-danger">
+                    Email is required
+               </div>
+              </div>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <div class="form-group">
+            <ion-icon name="lock-closed"></ion-icon>
+            <ion-input
+              placeholder="Password"
+              type="password"
+              required
+              name="first"
+              class="form-control"
+              formControlName="password"
+            ></ion-input>
+            <div *ngIf="form.controls.password.touched && form.controls.password.errors">
+              <div *ngIf="form.controls.password.errors.invalidLogin" 
+        class="alert alert-danger">
+                  Username or password is invalid.
+              </div>                        
+              <div *ngIf="form.controls.password.errors.required" 
+        class="alert alert-danger">
+                  Password is required.
+              </div>
+              <div *ngIf="form.controls.password.errors.cannotContainSpace" 
+        class="alert alert-danger">
+                  Password cannot contain space.
+              </div>
+            </div>     
+            </div>
+            <div *ngIf ="invalidLoginMessage" class=" alert alert-danger">
+              {{invalidLoginMessage}}  
+              </div> 
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button (click)="login()">Login</ion-button>
+          
+        </ion-col>
+      </ion-row>
+
+      <p>Not an account? <a routerLink="/signup">Signup now</a></p>
+
+      <div class="info-text">
+        <ion-text>
+          <p>
+            Forgot your password? Send a SMS with the following “kodeord” to +45
+            50 76 27 10.
+          </p>
+        </ion-text>
+      </div>
+    </ion-grid>
+    </form>
+  </div>
+</ion-content>
+
+
+
+
+
+
+
+<!-- <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button defaultHref=""></ion-back-button>
@@ -43,6 +141,8 @@
       <ion-row>
         <ion-col>
           <ion-button (click)="signinUser()">Login</ion-button>
+          <ion-button routerLink="/tutorial-accept">Login</ion-button>
+          
         </ion-col>
       </ion-row>
 
@@ -58,4 +158,4 @@
       </div>
     </ion-grid>
   </div>
-</ion-content>
+</ion-content> --> -->

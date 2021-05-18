@@ -14,13 +14,16 @@
 
     <ion-grid>
       <ion-row *ngFor="let z of zone">
-        <ion-col routerLink="/preference">
-          <ion-item> {{z.zoneName}}</ion-item>
+        <ion-col>
+          <ion-item class="four" (click)="presentPopover($event)"> {{z.zoneName}}</ion-item>
           <ion-text>5 people</ion-text>
         </ion-col>
       </ion-row>
     </ion-grid>
 
-    <ion-button>Take the quiz again</ion-button>
+    <!-- <ion-button routerLink= "/tutorial">Take the quiz again</ion-button>
+    <ion-button routerLink="/preference-history">for history page</ion-button> -->
+
   </div>
+
 </ion-content>

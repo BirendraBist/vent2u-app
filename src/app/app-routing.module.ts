@@ -79,6 +79,14 @@ const routes: Routes = [
     path: 'slider-dry',
     loadChildren: () => import('./pages/slider-dry/slider-dry.module').then(m => m.SliderDryPageModule)
   },
+  {
+    path: 'signin',
+    loadChildren: () => import('./pages/signin/signin.module').then( m => m.SigninPageModule)
+  },
+  {
+    path: 'popover',
+    loadChildren: () => import('./pages/popover/popover.module').then( m => m.PopoverPageModule)
+  },
 
 ];
 
