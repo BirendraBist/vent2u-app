@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+
 import { PreferencehistoryService } from '../../services/preferencehistory.service';
 import { Preferencehistory } from '../../models/peferencehistory.model';
+
 
 @Component({
   selector: 'app-preference-history',
@@ -8,6 +10,7 @@ import { Preferencehistory } from '../../models/peferencehistory.model';
   styleUrls: ['./preference-history.page.scss'],
 })
 export class PreferenceHistoryPage implements OnInit {
+
   prfceHistory: Preferencehistory[];
   constructor(
     private prfcehistoryService: PreferencehistoryService
@@ -27,7 +30,6 @@ export class PreferenceHistoryPage implements OnInit {
         error => {
           console.log(error);
         });
-
 
   }
 
