@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './preference.page.html',
   styleUrls: ['./preference.page.scss'],
 })
+
 export class PreferencePage {
 
   constructor() { }
@@ -16,6 +17,5 @@ export class PreferencePage {
     spacebetween: 5,
   }
 
- 
 
 }
