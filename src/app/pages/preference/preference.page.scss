@@ -15,14 +15,12 @@ ion-toolbar {
   
   /* This is title and subtext */
   h1{
-    margin-left: 11%;
-    font-size: 20px;
+    margin-top: 15%;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 5%;
   }
-  p{
-    margin-left: 11%;
-    font-size: 15px;
-    margin-right: 11%;
-  }
+  
   
   /* this is the card with the buttons */
   .card-title{
@@ -33,8 +31,6 @@ ion-toolbar {
     padding-left: 10px;
     padding-right: 10px;
     color: black;
-  font-weight: bold;
-  font-size: medium;
   }
   .card{
     width: 90%;
