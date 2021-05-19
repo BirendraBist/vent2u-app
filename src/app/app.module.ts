@@ -9,7 +9,6 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-// for firebase
 import { environment } from '../environments/environment';
 
 import { AngularFireModule } from '@angular/fire';
@@ -34,6 +33,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
     HttpClient,
 
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+
   bootstrap: [AppComponent],
 })
 export class AppModule { }

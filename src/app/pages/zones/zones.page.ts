@@ -1,4 +1,6 @@
+import { PopoverComponent } from './../../popover/popover.component';
 import { Component, OnInit } from '@angular/core';
+
 import { Zone } from '../../models/zone.model';
 import { HttpClient } from '@angular/common/http';
 import { ZoneService } from '../../services/zone.service';
@@ -52,7 +54,6 @@ export class ZonesPage implements OnInit {
         error => {
           console.log(error);
         })
-
   }
   
 

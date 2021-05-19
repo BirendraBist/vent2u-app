@@ -38,6 +38,7 @@ const routes: Routes = [
   },
   {
 
+
     path: 'tutorial',
     loadChildren: () => import('./pages/tutorial/tutorial.module').then(m => m.TutorialPageModule)
   },
@@ -86,6 +87,7 @@ const routes: Routes = [
   {
     path: 'popover',
     loadChildren: () => import('./pages/popover/popover.module').then( m => m.PopoverPageModule)
+
   },
 
 ];
