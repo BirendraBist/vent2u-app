@@ -9,7 +9,7 @@ import{Router} from '@angular/router'
 export class HomePage implements OnInit {
 
   constructor(public router:Router) {setTimeout(()=>{
-    this.router.navigateByUrl('login')
+    this.router.navigateByUrl('signin')
   },4000)}
 
   ngOnInit() {

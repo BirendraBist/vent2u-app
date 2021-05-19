@@ -5,20 +5,22 @@ ion-content {
   --ion-text-color: black;
 }
 ion-toolbar {
-  --background: #9acad8;
+  --background: #83bbd3;
   color: black;
 }
 
+ ion-toolbar{
+   --background: #9acad8;
+ }
+  
   /* This is title and subtext */
   h1{
-    margin-left: 11%;
-    font-size: 20px;
+    margin-top: 15%;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 5%;
   }
-  p{
-    margin-left: 11%;
-    font-size: 15px;
-    margin-right: 11%;
-  }
+  
   
   /* this is the card with the buttons */
   .card-title{
@@ -29,8 +31,6 @@ ion-toolbar {
     padding-left: 10px;
     padding-right: 10px;
     color: black;
-  font-weight: bold;
-  font-size: medium;
   }
   .card{
     width: 90%;
@@ -38,7 +38,7 @@ ion-toolbar {
     box-shadow: none;
     background: white;
   }
-  ion-button{
+  .button{
     --background: #9DB0B7;
     --background-activated: #9ACAD8;
     --background-hover: #9ACAD8;
@@ -84,7 +84,4 @@ ion-toolbar {
     font-size: 30px;
     height: 40px;
   }
-  
-  
-  
   
