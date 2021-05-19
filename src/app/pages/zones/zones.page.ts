@@ -1,4 +1,3 @@
-import { PopoverComponent } from './../../popover/popover.component';
 import { Component, OnInit } from '@angular/core';
 
 import { Zone } from '../../models/zone.model';
