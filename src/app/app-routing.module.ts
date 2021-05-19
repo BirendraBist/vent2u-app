@@ -13,10 +13,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
 
-  {
-    path: 'login',
-    loadChildren: () => import('./pages/login/login.module').then(m => m.LoginPageModule)
-  },
+
   {
     path: 'results',
     loadChildren: () => import('./pages/results/results.module').then(m => m.ResultsPageModule)
@@ -34,7 +31,7 @@ const routes: Routes = [
   {
     path: 'zones',
     loadChildren: () => import('./pages/zones/zones.module').then(m => m.ZonesPageModule)
-    
+
   },
   {
 
@@ -46,11 +43,7 @@ const routes: Routes = [
     path: 'tutorial-accept',
     loadChildren: () => import('./pages/tutorial-accept/tutorial-accept.module').then(m => m.TutorialAcceptPageModule)
   },
-  {
 
-    path: 'signup',
-    loadChildren: () => import('./pages/signup/signup.module').then(m => m.SignupPageModule)
-  },
   {
     path: 'preference',
     loadChildren: () => import('./pages/preference/preference.module').then(m => m.PreferencePageModule)
@@ -80,14 +73,15 @@ const routes: Routes = [
     path: 'slider-dry',
     loadChildren: () => import('./pages/slider-dry/slider-dry.module').then(m => m.SliderDryPageModule)
   },
-  {
-    path: 'signin',
-    loadChildren: () => import('./pages/signin/signin.module').then( m => m.SigninPageModule)
-  },
+  
   {
     path: 'popover',
-    loadChildren: () => import('./pages/popover/popover.module').then( m => m.PopoverPageModule)
+    loadChildren: () => import('./pages/popover/popover.module').then(m => m.PopoverPageModule)
 
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
 
 ];

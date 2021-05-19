@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import{Router} from '@angular/router'
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-home',
@@ -8,9 +8,11 @@ import{Router} from '@angular/router'
 })
 export class HomePage implements OnInit {
 
-  constructor(public router:Router) {setTimeout(()=>{
-    this.router.navigateByUrl('signin')
-  },4000)}
+  constructor(public router: Router) {
+    setTimeout(() => {
+      this.router.navigateByUrl('login')
+    }, 4000)
+  }
 
   ngOnInit() {
   }

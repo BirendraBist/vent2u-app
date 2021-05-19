@@ -9,6 +9,9 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+
+
+// import for firebase
 import { environment } from '../environments/environment';
 
 import { AngularFireModule } from '@angular/fire';
