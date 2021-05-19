@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { PasswordValidatorService } from '../../services/passwordvalidator.service';
-import { SigninService } from '../../services/signin.service';
+import { LoginService } from '../../services/login.service';
 import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-login',
@@ -14,7 +14,7 @@ export class LoginPage implements OnInit {
   form: FormGroup;
   invalidLoginMessage;
   constructor(fb: FormBuilder,
-    private signinService: SigninService,
+    private loginService: LoginService,
     private route: ActivatedRoute) {
 
     this.form = fb.group({
@@ -30,7 +30,7 @@ export class LoginPage implements OnInit {
   }
 
   login() {
-    const result = this.signinService.login(this.form.controls.username.value,
+    const result = this.loginService.login(this.form.controls.username.value,
       this.form.controls.password.value);
     if (!result) {
       this.form.controls.password.setErrors({
