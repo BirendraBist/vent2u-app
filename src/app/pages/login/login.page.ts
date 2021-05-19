@@ -1,72 +1,41 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
-import { AlertController, } from '@ionic/angular';
-import { AuthConstant } from '../../services/auth-constant';
-
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { PasswordValidatorService } from '../../services/passwordvalidator.service';
+import { LoginService } from '../../services/login.service';
+import { ActivatedRoute } from '@angular/router';
 @Component({
-  selector: 'app-sign-in',
+  selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  userName: String;
-  password: String;
-  constructor(
-    private alertCtrl: AlertController,
-    private http: HttpClient,
-    private router: Router,
 
-  ) { }
-  signinUser() {
-    if (!this.userName || !this.password) {
-      this.presentNotification(
-        'Enter your user name and password first',
-        '',
-        ['ok']
-      );
-      console.log('please enter you username and password');
-      return;
-    }
-    this.http
-      .post(
-        AuthConstant.DOMAIN + 'user/login', {
-        userName: this.userName,
-        password: this.password,
-      },
-        { observe: 'response' }
+ 
+  form: FormGroup;
+  invalidLoginMessage;
+  constructor(fb: FormBuilder,
+    private loginService: LoginService,
+    private route: ActivatedRoute) {
 
-      )
-      .subscribe((resp) => {
-        if (resp.status == 200) {
-          sessionStorage.setItem('currentUserToken', resp.body['token']);
-          this.router.navigate(['/rooms']);
-        }
-      },
-        (err) => {
-          console.log(err);
-          this.presentNotification('Incorrect UserName or Password... ', '', ['Again'])
-
-        }
-
-      );
-
-  }
-  async presentNotification(
-    header: string,
-    message: string,
-    buttons: string[]
-  ) {
-    const alert = await this.alertCtrl.create({
-      cssClass: 'alertClass',
-      header: header,
-      message: message,
-      buttons: buttons,
+    this.form = fb.group({
+      username: ['', Validators.required],
+      password: ['', Validators.compose([Validators.required,
+        PasswordValidatorService.cannotContainSpace])]
     });
-    await alert.present();
-    let result = await alert.onDidDismiss();
   }
-  ngOnInit() { }
+  ngOnInit() {
+    this.route.params.subscribe(params => { //subscribe is like observable which pass the vaule of parameter
+      this.invalidLoginMessage = params.invalidLoginMessage;
+    });
+  }
+
+  login() {
+    const result = this.loginService.login(this.form.controls.username.value,
+      this.form.controls.password.value);
+    if (!result) {
+      this.form.controls.password.setErrors({
+        invalidLogin: true
+      });
+    }
+  }
 }
-
-

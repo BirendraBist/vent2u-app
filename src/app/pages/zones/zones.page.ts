@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Zone } from '../../models/zone.model';
 import { HttpClient } from '@angular/common/http';
 import { ZoneService } from '../../services/zone.service';
 import { Router } from '@angular/router';
+import { PopoverPage } from '../popover/popover.page';
+import { PopoverController } from '@ionic/angular';
 
 
 @Component({
@@ -15,8 +18,26 @@ export class ZonesPage implements OnInit {
   id:any;
 
   constructor(
-    private zoneservice: ZoneService, router: Router, http: HttpClient
+    private zoneservice: ZoneService, 
+    private router: Router, 
+    private http: HttpClient,
+    public popoverController: PopoverController,
+
   ) { }
+
+
+  async presentPopover(eve) {
+    const popover = await this.popoverController.create({
+      component: PopoverPage,
+      componentProps:{},
+      cssClass: 'my-custom-class',
+      event: eve,
+      translucent: true
+    });
+    await popover.present();
+  }
+  
+  
 
 
   ngOnInit(): void {
@@ -32,7 +53,6 @@ export class ZonesPage implements OnInit {
         error => {
           console.log(error);
         })
-
   }
   
 
