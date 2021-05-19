@@ -9,7 +9,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-
+// for firebase
 import { environment } from '../environments/environment';
 
 import { AngularFireModule } from '@angular/fire';
@@ -28,8 +28,8 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
     AngularFireAuthModule,
     AngularFireStorageModule,
     AngularFireDatabaseModule,
-     AppRoutingModule, 
-     HttpClientModule],
+    AppRoutingModule,
+    HttpClientModule],
   providers: [
     HttpClient,
 
