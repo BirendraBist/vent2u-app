@@ -1,28 +1,97 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref=""></ion-back-button>
+      <ion-back-button
+        icon="caret-back-outline"
+        text=""
+        defaultHref="rooms"
+        class="back"
+      ></ion-back-button>
     </ion-buttons>
     <ion-title> Tutorial</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div class="container">
-    <h5>
-      The ventilator uses cold air. <br />
-      What can you do to prevent getting cold ?
-    </h5>
-    <div id="tutorialTopPicture">
-      <img src="assets/cold.png" alt="feeling cold" />
-    </div>
-    <p id="questionHeaderText">Pick all answers that apply</p>
-    <ion-list  lines="none">
-      <ion-item *ngFor="let entry of tutorialQuestions">
-        <ion-label>{{entry.text}}</ion-label>
-        <ion-checkbox  slot="start"></ion-checkbox>
-      </ion-item>
-    </ion-list>
-    <ion-button  routerLink="/rooms">Check answers</ion-button>
-  </div>
+  <ion-slides #mySlider class="swiper-no-swiping" pager="true">
+    <ion-slide>
+      <h5>
+        The ventilator uses cold air. <br />
+        What can you do to prevent getting cold?
+      </h5>
+      <div id="tutorialTopPicture">
+        <img src="assets/coldB_1.svg" alt="feeling cold" />
+      </div>
+      <p id="questionHeaderText">Pick all answers that apply</p>
+      <ion-list lines="none">
+        <ion-item *ngFor="let entry of question1">
+          <ion-label>{{entry.text}}</ion-label>
+          <ion-checkbox slot="start"></ion-checkbox>
+        </ion-item>
+      </ion-list>
+      <ion-button *ngIf="!showNext" id="answerCheck" (click)="checkAnswer()"
+        >{{checkButtonText}}</ion-button
+      >
+      <ion-button *ngIf="showNext" id="answerCheck" (click)="swipeNext()"
+        >{{nextButtonText}}</ion-button
+      >
+    </ion-slide>
+    <ion-slide>
+      <h5>What happens if the ventilation is turned down/off?</h5>
+      <div id="tutorialTopPicture">
+        <img src="assets/humid.svg" alt="feeling cold" />
+      </div>
+      <p id="questionHeaderText">Pick all answers that apply</p>
+      <ion-list lines="none">
+        <ion-item *ngFor="let entry of question2">
+          <ion-label>{{entry.text}}</ion-label>
+          <ion-checkbox slot="start"></ion-checkbox>
+        </ion-item>
+      </ion-list>
+      <ion-button *ngIf="!showNext" id="answerCheck" (click)="checkAnswer()"
+        >{{checkButtonText}}</ion-button
+      >
+      <ion-button *ngIf="showNext" id="answerCheck" (click)="swipeNext()"
+        >{{nextButtonText}}</ion-button
+      >
+    </ion-slide>
+    <ion-slide>
+      <h5>What can you do to prevent stale/smelly air?</h5>
+      <div id="tutorialTopPicture">
+        <img src="assets/ok.svg" alt="feeling cold" />
+      </div>
+      <p id="questionHeaderText">Pick all answers that apply</p>
+      <ion-list lines="none">
+        <ion-item *ngFor="let entry of question3">
+          <ion-label>{{entry.text}}</ion-label>
+          <ion-checkbox slot="start"></ion-checkbox>
+        </ion-item>
+      </ion-list>
+      <ion-button *ngIf="!showNext" id="answerCheck" (click)="checkAnswer()"
+        >{{checkButtonText}}</ion-button
+      >
+      <ion-button *ngIf="showNext" id="answerCheck" (click)="swipeNext()"
+        >{{nextButtonText}}</ion-button
+      >
+    </ion-slide>
+    <ion-slide>
+      <h5>You feel hot, what can you do?</h5>
+      <div id="tutorialTopPicture">
+        <img src="assets/warm_3.svg" alt="feeling cold" />
+      </div>
+      <p id="questionHeaderText">Pick all answers that apply</p>
+      <ion-list lines="none">
+        <ion-item *ngFor="let entry of question4">
+          <ion-label>{{entry.text}}</ion-label>
+          <ion-checkbox slot="start"></ion-checkbox>
+        </ion-item>
+      </ion-list>
+      <ion-button *ngIf="!showNext" id="answerCheck" (click)="checkAnswer()"
+        >{{checkButtonText}}</ion-button
+      >
+      <ion-button *ngIf="showNext" id="answerCheck" routerLink="/rooms"
+        >{{nextButtonText}}</ion-button
+      >
+    </ion-slide>
+  </ion-slides>
 </ion-content>
