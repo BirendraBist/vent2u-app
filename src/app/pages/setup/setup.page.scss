@@ -1,5 +1,4 @@
 ion-content {
-  --ion-background-color: white;
   --ion-text-color: black;
 }
 ion-toolbar {
@@ -9,12 +8,12 @@ ion-toolbar {
 }
 
 .container {
-    padding: auto;
+  padding: auto;
   text-align: center;
   position: absolute;
   left: 0;
   right: 0;
-  top: 6%;
+  top: 5.5%;
   --ion-text-color: black;
 }
 ion-card {
@@ -42,4 +41,7 @@ ion-button {
 }
 .btnUse:hover {
   background: #46dadf;
+}
+.f-class {
+  padding-top: 4rem;
 }

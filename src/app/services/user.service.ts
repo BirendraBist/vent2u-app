@@ -1,26 +1,39 @@
 import { Injectable } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
+
 import { HttpClient } from '@angular/common/http';
-import { AuthConstant } from './auth-constant';
 import { Observable } from 'rxjs';
+import { Zone } from '../models/Zone.model';
 import { User } from '../models/user.model';
 
 
 
 @Injectable({
-    providedIn: 'root'
+ providedIn: 'root'
 })
 export class UserService {
-    constructor(private http: HttpClient) { }
+ collectionName = 'Users'
+ constructor(
+  private fireStore: AngularFirestore
+ ) { }
 
+ create_user(record) {
+  return this.fireStore.collection(this.collectionName).add(record);
+ }
+ read_user() {
+  return this.fireStore.collection(this.collectionName).snapshotChanges();
+ }
 
-    getAll(): Observable<User[]> {
-        return this.http.get<User[]>(AuthConstant.DOMAIN + 'user');
-    }
+ update_user(recordID, record) {
+  this.fireStore.doc(this.collectionName + '/' + recordID).update(record);
+ }
+ delete_user(record_id) {
+  this.fireStore.doc(this.collectionName + '/' + record_id).delete();
+ }
 
-    get(id: any): Observable<User> {
-        return this.http.get(`${AuthConstant.DOMAIN + 'user'}/${id}`);
-    }
-    create(data: any): Observable<User> {
-        return this.http.post(AuthConstant.DOMAIN + 'user', data);
-    }
+ getbyid_user(record_ID) {
+  return this.fireStore.collection(this.collectionName).doc(record_ID).valueChanges();
+ }
+ 
+
 }

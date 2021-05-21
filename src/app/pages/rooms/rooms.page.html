@@ -6,21 +6,25 @@
     <ion-title> select the room </ion-title>
   </ion-toolbar>
 </ion-header>
+
 <ion-content [fullscreen]="true">
   <div class="container">
-<h5>HI{{userName}}</h5>
-<ion-button (click)="logout()"> logout</ion-button>
+  <ion-item *ngFor ="let u of user" >
+   <p>{{u.name}}</p>
+  </ion-item>
+    <!-- <h5>HI{{userName}}</h5>
+<ion-button (click)="logout()"> logout</ion-button> -->
     <div class="searchbar">
       <ion-searchbar placeholder="Search" clearIcon> </ion-searchbar>
     </div>
 
     <ion-list line="none" *ngFor="let r of room;">
       <ion-item routerLink="/zones">
-        <ion-label>{{ r.roomName }}</ion-label>
+        <ion-label>{{ r.roomName }} </ion-label>
         <ion-text>5 people</ion-text>
       </ion-item>
     </ion-list>
 
-    <ion-button>Take the quiz again</ion-button>
+    <ion-button routerLink="/tutorial">Take the quiz again</ion-button>
   </div>
 </ion-content>

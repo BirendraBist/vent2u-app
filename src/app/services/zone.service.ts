@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Zone } from '../models/Zone.model';
-import { AuthConstant} from './auth-constant';
+import { AuthConstant } from './auth-constant';
 
 //const baseUrl = 'http://localhost:8081/api/Zone';
 

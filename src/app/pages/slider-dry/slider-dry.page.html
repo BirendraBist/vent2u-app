@@ -2,26 +2,44 @@
   <ion-toolbar>
     <ion-title></ion-title>
     <ion-buttons slot="start">
-      <ion-back-button icon="caret-back-outline" text="" defaultHref="preference" class="back"></ion-back-button>
+      <ion-back-button
+        icon="caret-back-outline"
+        text=""
+        defaultHref="preference"
+        class="back"
+      ></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
   <h1>How do you feel?</h1>
 
-  <p>Move the slider according to how you feel and submit your answer.
-    </p>
+  <p>Move the slider according to how you feel and submit your answer.</p>
 
-    <ion-card class="card">
-     <ion-card-title class="card-title">How dry do you think the air is?</ion-card-title>
-     <img src="assets/coldB_1.svg">
-       <ion-range min="1" max="10" pin="true" class="ion-range">
-         <ion-label slot="start">1</ion-label>
-         <ion-label slot="end">10</ion-label>
-       </ion-range>
-       <ion-button class="sumbit">Submit</ion-button>
-   </ion-card>
+  <ion-card class="card">
+    <ion-card-title class="card-title"
+      >How dry do you think the air is?</ion-card-title
+    >
+    <img src="assets/coldB_1.svg" />
+    <div *ngFor="let up of userpreferenceList">
+      <ion-range
+        min="1"
+        max="10"
+        pin="true"
+        class="ion-range"
+        [(ngModel)]="up.Editdry"
+      >
+        {{up.dry}}
+        <ion-label slot="start">0</ion-label>
+        <ion-label slot="end">10</ion-label>
+      </ion-range>
+      <div routerLink="/preference">
 
+      <ion-button class="sumbit" (click)="UpdateUserpreference(up)"
+        >upadte</ion-button
+      >
+    </div>
+    </div>
+  </ion-card>
 </ion-content>
