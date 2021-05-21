@@ -1,5 +1,5 @@
-// export class User{
-// id?:any;
-// userName?:string;
-// password?:string;
-// }
+export class User{
+id?:any;
+userName?:string;
+password?:string;
+}

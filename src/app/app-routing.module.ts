@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -47,12 +46,11 @@ const routes: Routes = [
   {
     path: 'preference',
     loadChildren: () => import('./pages/preference/preference.module').then(m => m.PreferencePageModule)
+  }, {
+    path: 'preference/:id',
+    loadChildren: () => import('./pages/preference/preference.module').then(m => m.PreferencePageModule)
   },
-  {
 
-    path: 'preference-history',
-    loadChildren: () => import('./pages/preference-history/preference-history.module').then(m => m.PreferenceHistoryPageModule)
-  },
   {
     path: 'slider-cold',
     loadChildren: () => import('./pages/slider-cold/slider-cold.module').then(m => m.SliderColdPageModule)
@@ -73,7 +71,7 @@ const routes: Routes = [
     path: 'slider-dry',
     loadChildren: () => import('./pages/slider-dry/slider-dry.module').then(m => m.SliderDryPageModule)
   },
-  
+
   {
     path: 'popover',
     loadChildren: () => import('./pages/popover/popover.module').then(m => m.PopoverPageModule)
@@ -81,8 +79,18 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./pages/login/login.module').then(m => m.LoginPageModule)
   },
+  {
+    path: 'userpreference',
+    loadChildren: () => import('./pages/userpreference/userpreference.module').then(m => m.UserpreferencePageModule)
+  },
+  {
+    path: 'setup',
+    loadChildren: () => import('./pages/setup/setup.module').then(m => m.SetupPageModule)
+  },
+
+
 
 ];
 

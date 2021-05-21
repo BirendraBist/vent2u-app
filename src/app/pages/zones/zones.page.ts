@@ -15,11 +15,11 @@ import { PopoverController } from '@ionic/angular';
 })
 export class ZonesPage implements OnInit {
   zone: Zone[];
-  id:any;
+  id: any;
 
   constructor(
-    private zoneservice: ZoneService, 
-    private router: Router, 
+    private zoneservice: ZoneService,
+    private router: Router,
     private http: HttpClient,
     public popoverController: PopoverController,
 
@@ -29,15 +29,17 @@ export class ZonesPage implements OnInit {
   async presentPopover(eve) {
     const popover = await this.popoverController.create({
       component: PopoverPage,
-      componentProps:{},
+      componentProps: {},
       cssClass: 'my-custom-class',
       event: eve,
       translucent: true
     });
     await popover.present();
   }
-  
-  
+
+
+
+
 
 
   ngOnInit(): void {
@@ -54,7 +56,7 @@ export class ZonesPage implements OnInit {
           console.log(error);
         })
   }
-  
 
-  
+
+
 }

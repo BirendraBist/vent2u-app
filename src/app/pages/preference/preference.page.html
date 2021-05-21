@@ -1,4 +1,3 @@
-
 <ion-header>
   <ion-toolbar>
     <ion-title></ion-title>
@@ -18,71 +17,66 @@
 
   <h1>How do you feel?</h1>
 
-
   <!-- Slider with questions and buttons to answer-->
 
-  <ion-slides [options]="option" class="slider" pager="true">
+  <ion-slides pager="false">
+    <!-- for cold slider -->
     <ion-slide>
       <ion-card class="card">
         <ion-card-title class="card-title"
           >Do you feel cold right now?</ion-card-title
         >
         <img src="assets/coldB_1.svg" />
-        <ion-button class="button" href="./slider-cold">Agree</ion-button>
-        <ion-button class="button" href="">Disagree</ion-button>
+        <ion-button class="button" routerLink="/slider-cold">Agree</ion-button>
+        <ion-button class="button" (click)="next(1)">Disagree</ion-button>
       </ion-card>
     </ion-slide>
-    <ion-slide>
-      <ion-card class="card">
-        <ion-card-title class="card-title"
-          >Do you think the air quality is good?</ion-card-title
-
-        >
-        <img src="assets/ok.svg" />
-        <ion-button class="button">Agree</ion-button>
-        <ion-button class="button" href="slider-airqiality">Disagree</ion-button>
-
-      </ion-card>
-    </ion-slide>
-
-    <ion-slide>
-      <ion-card class="card">
-        <ion-card-title class="card-title"
-          >Do you think the air is too dry?</ion-card-title>
-
-
-
-        <img src="assets/dry.svg" />
-        <ion-button class="button" href="slider-dry">Agree</ion-button>
-        <ion-button class="button">Disagree</ion-button>
-      </ion-card>
-    </ion-slide>
+    <!-- for warm slider -->
     <ion-slide>
       <ion-card class="card">
         <ion-card-title class="card-title"
           >Do you feel too warm right now?</ion-card-title
         >
         <img src="assets/warm_3.svg" />
-        <ion-button class="button" href="slider-warm">Agree</ion-button>
-        <ion-button class="button">Disagree</ion-button>
+        <ion-button class="button" routerLink="/slider-warm">Agree</ion-button>
+        <ion-button class="button" (click)="next(2)">Disagree</ion-button>
       </ion-card>
     </ion-slide>
+    <!-- for dry slider -->
     <ion-slide>
       <ion-card class="card">
         <ion-card-title class="card-title"
-          >Do you think the air is too humid?</ion-card-title
+          >Do you think the air is too dry?</ion-card-title
+        >
+        <img src="assets/dry.svg" />
+        <ion-button class="button" routerLink="/slider-dry">Agree</ion-button>
+        <ion-button class="button" (click)="next(3)">Disagree</ion-button>
+      </ion-card>
+    </ion-slide>
+    <!-- for moist slider -->
+    <ion-slide>
+      <ion-card class="card">
+        <ion-card-title class="card-title"
+          >Do you think the air is too moist?</ion-card-title
         >
         <img src="assets/humid.svg" />
-        <ion-button class="button" href="slider-moist">Agree</ion-button>
-        <ion-button class="button">Disagree</ion-button>
+        <ion-button class="button" routerLink="/slider-moist">Agree</ion-button>
+        <ion-button class="button" (click)="next(4)">Disagree</ion-button>
+      </ion-card>
+    </ion-slide>
+    <!-- for airflow slider -->
+    <ion-slide>
+      <ion-card class="card">
+        <ion-card-title class="card-title"
+          >Do you think the air quality is good?</ion-card-title
+        >
+        <img src="assets/ok.svg" />
+        <ion-button class="button" routerLink="/results">Agree</ion-button>
+        <ion-button class="button" routerLink="/slider-airqiality"
+          >Disagree</ion-button
+        >
       </ion-card>
     </ion-slide>
     <br />
   </ion-slides>
-
-
-  
-
-
 </ion-content>
-

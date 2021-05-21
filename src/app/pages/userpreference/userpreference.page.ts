@@ -3,13 +3,11 @@ import { UserPreference } from '../../models/userpreference.model';
 import { FirebaseService } from '../../services/firebase.service';
 import { FormGroup, FormBuilder } from '@angular/forms';
 @Component({
-  selector: 'app-slider-airqiality',
-  templateUrl: './slider-airqiality.page.html',
-  styleUrls: ['./slider-airqiality.page.scss'],
+  selector: 'app-userpreference',
+  templateUrl: './userpreference.page.html',
+  styleUrls: ['./userpreference.page.scss'],
 })
-export class SliderAirqialityPage implements OnInit {
-
-
+export class UserpreferencePage implements OnInit {
   userpreference: UserPreference;
   userpreferenceList = [];
   userpreferenceForm: FormGroup;
@@ -24,11 +22,12 @@ export class SliderAirqialityPage implements OnInit {
     this.userpreferenceForm = this.fb.group({
       cold: [''],
       warm: [''],
+      airFlow: [''],
       dry: [''],
-      moist: [''],
-      airQuality: ['']
-
+      moist: ['']
     })
+
+
 
     this.firebaseService.read_userpreference().subscribe(data => {
       this.userpreferenceList = data.map(e => {
@@ -39,7 +38,7 @@ export class SliderAirqialityPage implements OnInit {
           warm: e.payload.doc.data()['warm'],
           dry: e.payload.doc.data()['dry'],
           moist: e.payload.doc.data()['moist'],
-          airQuality: e.payload.doc.data()['airQuality']
+          airFlow: e.payload.doc.data()['airFlow'],
         };
       })
       console.log(this.userpreferenceList);
@@ -47,18 +46,12 @@ export class SliderAirqialityPage implements OnInit {
 
   }
 
-  EditUserpreference(record) {
-    record.isEdit = true;
-    record.EditairQuality = record.airQuality;
 
-  }
+  // RemoveUserPreference(rowID) {
+  //   this.firebaseService.delete_userpreference(rowID);
+  // }
 
-  UpdateUserpreference(recordRow) {
-    let record = {};
-    record['airQuality'] = recordRow.EditairQuality;
 
-    this.firebaseService.update_userpreference(recordRow.id, record);
-    recordRow.isEdit = false;
-  }
+
 
 }

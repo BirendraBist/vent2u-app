@@ -38,7 +38,7 @@ export class LoginService {
   logout() {
     this.loggedIn.next(false);
     this.afAuth.auth.signOut();
-    this.router.navigate(['/menus']);
+    this.router.navigate(['']);
   }
   // for signup method
   // signup(username, password) {

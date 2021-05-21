@@ -9,6 +9,9 @@
 
 <ion-content [fullscreen]="true">
   <div class="container">
+  <ion-item *ngFor ="let u of user" >
+   <p>{{u.name}}</p>
+  </ion-item>
     <!-- <h5>HI{{userName}}</h5>
 <ion-button (click)="logout()"> logout</ion-button> -->
     <div class="searchbar">

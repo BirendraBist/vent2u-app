@@ -1,0 +1,48 @@
+
+ion-content {
+ --ion-text-color: black;
+}
+ion-toolbar {
+ position: absolute;
+ --background: #83bbd2;
+ color: #000;
+}
+
+.container {
+   padding: auto;
+ text-align: center;
+ position: absolute;
+ left: 0;
+ right: 0;
+ top: 5.5%;
+ --ion-text-color: black;
+}
+ion-card {
+ --background: #d9ecf2;
+ border-radius: 8px;
+}
+ion-item {
+ --background: #d9ecf2;
+ border-radius: 8px;
+}
+
+ion-icon {
+ color: red;
+}
+ion-button {
+ margin: 0rem;
+}
+.btnUse {
+ margin: 0rem;
+ height: 2rem;
+ width: 3rem;
+ background: #83bbd2;
+ color: black;
+ border-radius: 8px;
+}
+.btnUse:hover {
+ background: #46dadf;
+}
+.f-class{
+  padding-top: 3rem;
+}

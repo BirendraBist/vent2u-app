@@ -18,6 +18,8 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFirestore } from '@angular/fire/firestore';
+
 
 
 
@@ -34,6 +36,8 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
     HttpClientModule],
   providers: [
     HttpClient,
+    AngularFirestore,
+    
 
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
 

@@ -4,9 +4,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { SliderAirqialityPageRoutingModule } from './slider-airqiality-routing.module';
+import { SetupPageRoutingModule } from './setup-routing.module';
 
-import { SliderAirqialityPage } from './slider-airqiality.page';
+import { SetupPage } from './setup.page';
 
 @NgModule({
   imports: [
@@ -14,8 +14,8 @@ import { SliderAirqialityPage } from './slider-airqiality.page';
     FormsModule,
     IonicModule,
     ReactiveFormsModule,
-    SliderAirqialityPageRoutingModule
+    SetupPageRoutingModule
   ],
-  declarations: [SliderAirqialityPage]
+  declarations: [SetupPage]
 })
-export class SliderAirqialityPageModule { }
+export class SetupPageModule { }
