@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { CheckboxControlValueAccessor } from '@angular/forms';
 import { IonSlides } from '@ionic/angular';
 
 @Component({
@@ -98,9 +99,32 @@ export class TutorialPage implements OnInit {
   checkAnswer() {
     this.slides.getActiveIndex().then((index) => {
       this.slides.getSwiper().then((swip) => {
-        console.log(swip.slides[index]);
+        let checkboxes = swip.slides[index].querySelectorAll('ion-checkbox');
+        let correctAnswers = 0;
+        let correctAnswersNeeded = checkboxes.length;
+        // check if checkbox input matches right answers
+        for (let i = 0; i < checkboxes.length; i++) {
+          let activeQuestions = this.questionArr[index];
+          let isChecked = checkboxes[i].checked;
+          let answer = activeQuestions[i].rightAnswer;
+          if (isChecked == answer) {
+            correctAnswers++;
+          }
+        }
+        // are all answers correct?
+        if (correctAnswers == correctAnswersNeeded) {
+          this.handleCorrectAnswer();
+          console.log('correct answers');
+        } else {
+          this.handleWrongAnswer();
+          console.log('wrong answers');
+        }
       });
-      // when correct show next question button
+    });
+  }
+  handleCorrectAnswer() {
+    // when correct show next question button
+    this.slides.getActiveIndex().then((index) => {
       this.slides.length().then((len) => {
         if (index == len - 1) {
           this.nextButtonText = 'End quiz';
@@ -109,6 +133,7 @@ export class TutorialPage implements OnInit {
       this.showNext = true;
     });
   }
+  handleWrongAnswer() {}
 
   ngOnInit() {}
 }
