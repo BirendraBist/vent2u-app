@@ -3,47 +3,41 @@ ion-content {
   --ion-text-color: black;
 }
 ion-toolbar {
-  --background: #83bbd2;
+  --background: #9ACAD8;
   color: #000;
 }
-.container {
-  padding: 1.5rem;
-  text-align: center;
+
+
+ion-card{
+  background-color: #9ACAD8;
+  border-radius: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 30%;
+}
+
+ion-card-title{
+  font-weight: lighter;
+  font-size: 22px;
+  margin-top: 10%;
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 45%;
-  transform: translateY(-50%);
-  --ion-text-color: black;
-}
-h5 {
-  padding: 2rem;
-}
-#tutorialAcceptImgcontainer {
-  width: 320px;
-  height: 520px;
-  background: #9acad8;
-  border-radius: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative; 
-}
-#tutorialAcceptImgcontainer img {
-    margin-top:11rem;
-    
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 ion-button {
-  padding:0rem;
-  width: 133px;
-  height: 60px;
-  font-size: large;
-  margin: 15px;
+  width: 48%;
+  height: 60px;;
   border-radius: 8px;
-  --background: #9acad8;
-  border-radius: 8px;
+  --background: #9DB0B7;
   color: black;
 }
+
+.buttons{
+  margin-left: 10%;
+  margin-right: 10%;
+}
 ion-button:hover {
-  --background: #43aaa0f5;
+  --background: #9ACAD8;
+  --background-activated: #9ACAD8;
 }

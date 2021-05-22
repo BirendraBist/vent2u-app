@@ -4,40 +4,69 @@
       <ion-buttons slot="start">
         <ion-back-button defaultHref=""></ion-back-button>
       </ion-buttons>
-      <ion-title> results</ion-title>
+      <ion-title> </ion-title>
     </ion-toolbar>
   </ion-header>
-  <div class="container">
-    <div>
-      <ion-text>
-        <h5>Thank you for answering</h5>
-      </ion-text>
+  <h1>Thanks for answering</h1>
+
+  <h2>5 people in the zone</h2>
+  
+  <div class="box">
+    <div class="left">
+      <div>
+      <h5>cold</h5>
+      <img src="assets/Asset 3.svg">
+      </div>
+      <div>
+      <h4>3 votes</h4>
+      </div>
     </div>
-    <div>
-      <ion-text> 5 people in the zone </ion-text>
+    <div class="right">
+      <h5>warm</h5>
+      <img src="assets/warm2.svg">
+      <h4>2 votes</h4>
     </div>
-    <div class="grid">
-      <ion-grid>
-        <ion-row>
-          <ion-col>
-            <p>60% agree the temperature is too cold</p>
-            <ion-progress-bar value="0.6"></ion-progress-bar>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col>
-            <p>80% disagree that humidity is too low</p>
-            <ion-progress-bar value="0.8"></ion-progress-bar>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col>
-            <p>60% think the air quality is good</p>
-            <ion-progress-bar value="0.6"></ion-progress-bar>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </div>
-    <ion-button routerLink="/countdown" class="done-button">Done</ion-button>
   </div>
+  
+  <h3>Temperature will increase</h3>
+  
+  <div>
+    <div class="left">
+      <div>
+      <h5>humid</h5>
+      <img src="assets/Asset 20.svg">
+      </div>
+      <div>
+      <h4>3 votes</h4>
+      </div>
+    </div>
+    <div class="right">
+      <h5>dry</h5>
+      <img src="assets/Asset 17.svg">
+      <h4>2 votes</h4>
+    </div>
+  </div>
+  
+  <h3>Humidity will increase</h3>
+
+  <div>
+    <div class="left">
+      <div>
+      <h5>good</h5>
+      <img src="assets/Asset 18.svg">
+      </div>
+      <div>
+      <h4>3 votes</h4>
+      </div>
+    </div>
+    <div class="right">
+      <h5>bad</h5>
+      <img src="assets/Asset 18.svg">
+      <h4>2 votes</h4>
+    </div>
+  </div>
+  
+  <h3>Airquality will stay the same</h3>
+
+  <ion-button class="done" routerLink="/countdown">Done</ion-button>
 </ion-content>

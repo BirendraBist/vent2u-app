@@ -1,0 +1,36 @@
+ion-content {
+    --ion-background-color: white;
+    --ion-text-color: black;
+  }
+
+  ion-toolbar {
+    --background: #9ACAD8;
+    color: #000;
+  }
+
+img{
+    position: fixed;
+    bottom: 0px;
+}
+
+p{
+    text-align: center;
+    font-size: 24px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 40%;
+    margin-bottom: 10%;
+}
+
+.button{
+    --background: #9ACAD8;
+    --background-activated: #9ACAD8;
+    --background-hover: #9ACAD8;
+    width: 80%;
+    height: 55px;
+    font-size: 18px;
+    color: black;
+    margin-left: 10%;
+    margin-right: 10%;
+    position: absolute;
+  }

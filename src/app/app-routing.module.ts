@@ -89,6 +89,11 @@ const routes: Routes = [
     path: 'setup',
     loadChildren: () => import('./pages/setup/setup.module').then(m => m.SetupPageModule)
   },
+  {
+    path: 'newanswers',
+    loadChildren: () => import('./pages/newanswers/newanswers.module').then( m => m.NewanswersPageModule)
+  },
+
 
 
 

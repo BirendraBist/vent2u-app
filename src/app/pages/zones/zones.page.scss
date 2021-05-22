@@ -3,8 +3,14 @@ ion-content {
   --ion-text-color: black;
 }
 ion-toolbar {
-  --background: #83bbd2;
+  --background: #9ACAD8;
   color: #000;
+}
+
+h1{
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 10%;
 }
 .container {
   padding: 1.5rem;
@@ -24,23 +30,28 @@ ion-item {
   padding: 0.5rem;
   --background: #d9ecf2;
   border-radius: 80px;
+  
 }
 ion-button {
   --background: #9acad8;
   border-radius: 8px;
   margin-top: 2rem;
   color: #000;
-  height: 3rem;
 }
 .div {
   align-self: center;
+
+}
+
+.container{
+  margin-top: 12%;
 }
 
 //hover css
 ion-item:hover{
-    --background: #80cbc4;
+    --background: #9ACAD8;
 }
 
 ion-button:hover {
-  --background: #80cbc4;
+  --background: #9ACAD8;
 }

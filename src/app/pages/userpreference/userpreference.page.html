@@ -4,10 +4,11 @@
       <ion-back-button defaultHref=""></ion-back-button>
     </ion-buttons>
 
-    <ion-title>Preference History</ion-title>
+    <ion-title></ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true">
+  <h1>Pick one of your previous answers</h1>
   <div class="container">
     <ion-grid>
       <ion-row>
@@ -21,10 +22,10 @@
               </ion-label>
               <ion-label>dry<ion-label>{{up.dry}}/10</ion-label> </ion-label>
               <ion-label
-                >moist<ion-label>{{up.moist}}/10</ion-label>
+                >humid<ion-label>{{up.moist}}/10</ion-label>
               </ion-label>
               <button class="btnUse" routerLink="/results" slot="end">
-                use
+                Use
               </button>
 
               <!-- <ion-button fill="clear" slot="end" (click)="RemoveUserPreference(up.id)"
