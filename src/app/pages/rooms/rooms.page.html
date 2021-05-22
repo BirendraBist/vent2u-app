@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref=""></ion-back-button>
+      <ion-back-button defaultHref="/login"></ion-back-button>
     </ion-buttons>
     <ion-title> select the room </ion-title>
   </ion-toolbar>
@@ -9,9 +9,9 @@
 
 <ion-content [fullscreen]="true">
   <div class="container">
-  <ion-item *ngFor ="let u of user" >
-   <p>{{u.name}}</p>
-  </ion-item>
+    <ion-item *ngFor="let u of user">
+      <p>{{u.name}}</p>
+    </ion-item>
     <!-- <h5>HI{{userName}}</h5>
 <ion-button (click)="logout()"> logout</ion-button> -->
     <div class="searchbar">

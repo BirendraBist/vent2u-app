@@ -36,11 +36,6 @@ ion-slides {
   margin-bottom: 0px;
 }
 
-#answerCheck {
-  text-align: center;
-  position: relative;
-}
-
 ion-list {
   padding: 1px;
   background-color: white;
@@ -48,12 +43,15 @@ ion-list {
 }
 ion-item {
   margin: 1rem;
+  width: 80vw;
+  --background: white;
   border: 1px solid;
-  --background: #d9ecf2;
+  border-radius: 6px;
 }
 ion-checkbox {
   --background: white;
   border: 1px solid;
+  border-radius: 6px;
 }
 ion-button {
   height: 3rem;
@@ -65,4 +63,83 @@ ion-button {
 
 ion-item:active {
   --background: #80cbc4;
+}
+
+#answerCheck {
+  text-align: center;
+  position: relative;
+  width: 80vw;
+}
+
+.wrongAnswer {
+  --background: rgb(197, 44, 44);
+  animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+
+.rightAnswer {
+  --background: rgb(44, 197, 69);
+  animation: heartbeat 1.5s ease-in-out both;
+}
+
+@keyframes shake-horizontal {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  80% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+  90% {
+    -webkit-transform: translateX(-8px);
+    transform: translateX(-8px);
+  }
+}
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
 }
