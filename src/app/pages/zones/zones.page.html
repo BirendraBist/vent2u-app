@@ -1,13 +1,10 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref=""></ion-back-button>
-
-
-    </ion-buttons> 
+      <ion-back-button defaultHref="/rooms"></ion-back-button>
+    </ion-buttons>
     <ion-title> </ion-title>
   </ion-toolbar>
- 
 </ion-header>
 <ion-content [fullscreen]="true">
   <h1>Select the zone you are sitting in</h1>
@@ -18,7 +15,9 @@
     <ion-grid>
       <ion-row *ngFor="let z of zone">
         <ion-col>
-          <ion-item class="four" (click)="presentPopover($event)"> {{z.zoneName}}</ion-item>
+          <ion-item class="four" (click)="presentPopover($event)">
+            {{z.zoneName}}</ion-item
+          >
           <ion-text>5 people</ion-text>
         </ion-col>
       </ion-row>
@@ -26,8 +25,5 @@
 
     <!-- <ion-button routerLink= "/tutorial">Take the quiz again</ion-button>
     <ion-button routerLink="/preference-history">for history page</ion-button> -->
-
   </div>
-  
-
 </ion-content>

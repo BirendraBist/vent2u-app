@@ -135,9 +135,11 @@ export class TutorialPage implements OnInit {
         this.slides.length().then((len) => {
           if (index == len - 1) {
             this.nextButtonText = 'End quiz';
+            this.showNext = true;
           }
         });
-        this.showNext = true;
+        //this.showNext = true;
+        this.swipeNext();
         this.checkButtonText = 'Check Answers';
       });
     }, 1500);
