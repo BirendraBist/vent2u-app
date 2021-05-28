@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { PasswordValidatorService } from '../../services/passwordvalidator.service';
 import { LoginService } from '../../services/login.service';
 import { ActivatedRoute } from '@angular/router';
 @Component({
@@ -10,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class LoginPage implements OnInit {
 
- 
+
   form: FormGroup;
   invalidLoginMessage;
   constructor(fb: FormBuilder,
@@ -19,8 +18,8 @@ export class LoginPage implements OnInit {
 
     this.form = fb.group({
       username: ['', Validators.required],
-      password: ['', Validators.compose([Validators.required,
-        PasswordValidatorService.cannotContainSpace])]
+      password: ['', Validators.compose([Validators.required
+      ])]
     });
   }
   ngOnInit() {

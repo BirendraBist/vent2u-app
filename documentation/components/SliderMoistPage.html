@@ -1,0 +1,812 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>vent2u-app documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">vent2u-app documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>SliderMoistPage</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/pages/slider-moist/slider-moist.page.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-slider-moist</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./slider-moist.page.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./slider-moist.page.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#fb">fb</a>
+                            </li>
+                            <li>
+                                <a href="#userpreference">userpreference</a>
+                            </li>
+                            <li>
+                                <a href="#userpreferenceForm">userpreferenceForm</a>
+                            </li>
+                            <li>
+                                <a href="#userpreferenceList">userpreferenceList</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#EditUserpreference">EditUserpreference</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#UpdateUserpreference">UpdateUserpreference</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(firebaseService: <a href="../injectables/FirebaseService.html">FirebaseService</a>, fb: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/pages/slider-moist/slider-moist.page.ts:15</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>firebaseService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FirebaseService.html" target="_self" >FirebaseService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>fb</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="EditUserpreference"></a>
+                    <span class="name">
+                        <b>
+                            EditUserpreference
+                        </b>
+                        <a href="#EditUserpreference"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>EditUserpreference(record)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="50"
+                            class="link-to-prism">src/app/pages/slider-moist/slider-moist.page.ts:50</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>record</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="23"
+                            class="link-to-prism">src/app/pages/slider-moist/slider-moist.page.ts:23</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="UpdateUserpreference"></a>
+                    <span class="name">
+                        <b>
+                            UpdateUserpreference
+                        </b>
+                        <a href="#UpdateUserpreference"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>UpdateUserpreference(recordRow)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="56"
+                            class="link-to-prism">src/app/pages/slider-moist/slider-moist.page.ts:56</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>recordRow</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fb"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            fb</b>
+                            <a href="#fb"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/pages/slider-moist/slider-moist.page.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="userpreference"></a>
+                        <span class="name">
+                            <b>
+                            userpreference</b>
+                            <a href="#userpreference"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/UserPreference.html" target="_self" >UserPreference</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/pages/slider-moist/slider-moist.page.ts:13</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="userpreferenceForm"></a>
+                        <span class="name">
+                            <b>
+                            userpreferenceForm</b>
+                            <a href="#userpreferenceForm"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/pages/slider-moist/slider-moist.page.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="userpreferenceList"></a>
+                        <span class="name">
+                            <b>
+                            userpreferenceList</b>
+                            <a href="#userpreferenceList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/pages/slider-moist/slider-moist.page.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { UserPreference } from &#x27;../../models/userpreference.model&#x27;;
+import { FirebaseService } from &#x27;../../services/firebase.service&#x27;;
+import { FormGroup, FormBuilder } from &#x27;@angular/forms&#x27;;
+
+@Component({
+  selector: &#x27;app-slider-moist&#x27;,
+  templateUrl: &#x27;./slider-moist.page.html&#x27;,
+  styleUrls: [&#x27;./slider-moist.page.scss&#x27;],
+})
+export class SliderMoistPage implements OnInit {
+
+  userpreference: UserPreference;
+  userpreferenceList &#x3D; [];
+  userpreferenceForm: FormGroup;
+  constructor(
+    private firebaseService: FirebaseService,
+    public fb: FormBuilder
+  ) {
+    this.userpreference &#x3D; {} as UserPreference
+  }
+
+  ngOnInit() {
+    this.userpreferenceForm &#x3D; this.fb.group({
+      cold: [&#x27;&#x27;],
+      warm: [&#x27;&#x27;],
+      dry: [&#x27;&#x27;],
+      moist: [&#x27;&#x27;],
+      airFlow: [&#x27;&#x27;],
+
+    })
+
+    this.firebaseService.read_userpreference().subscribe(data &#x3D;&gt; {
+      this.userpreferenceList &#x3D; data.map(e &#x3D;&gt; {
+        return {
+          id: e.payload.doc[&#x27;id&#x27;],
+          isEdit: false,
+          cold: e.payload.doc.data()[&#x27;cold&#x27;],
+          warm: e.payload.doc.data()[&#x27;warm&#x27;],
+          dry: e.payload.doc.data()[&#x27;dry&#x27;],
+          moist: e.payload.doc.data()[&#x27;moist&#x27;],
+          airQuality: e.payload.doc.data()[&#x27;airQuality&#x27;]
+        };
+      })
+      console.log(this.userpreferenceList);
+    });
+
+  }
+
+  EditUserpreference(record) {
+    record.isEdit &#x3D; true;
+    record.Editmoist &#x3D; record.moist;
+
+  }
+
+  UpdateUserpreference(recordRow) {
+    let record &#x3D; {};
+    record[&#x27;moist&#x27;] &#x3D; recordRow.Editmoist;
+
+    this.firebaseService.update_userpreference(recordRow.id, record);
+    recordRow.isEdit &#x3D; false;
+  }
+
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ion-header&gt;
+  &lt;ion-toolbar&gt;
+    &lt;ion-title&gt;&lt;/ion-title&gt;
+    &lt;ion-buttons slot&#x3D;&quot;start&quot;&gt;
+      &lt;ion-back-button
+        icon&#x3D;&quot;caret-back-outline&quot;
+        text&#x3D;&quot;&quot;
+        defaultHref&#x3D;&quot;preference&quot;
+        class&#x3D;&quot;back&quot;
+      &gt;&lt;/ion-back-button&gt;
+    &lt;/ion-buttons&gt;
+  &lt;/ion-toolbar&gt;
+&lt;/ion-header&gt;
+
+&lt;ion-content&gt;
+  &lt;h1&gt;How do you feel?&lt;/h1&gt;
+
+  &lt;p&gt;Move the slider according to how you feel and submit your answer.&lt;/p&gt;
+
+  &lt;ion-card class&#x3D;&quot;card&quot;&gt;
+    &lt;ion-card-title class&#x3D;&quot;card-title&quot;
+      &gt;How moist do you think the room is?&lt;/ion-card-title
+    &gt;
+    &lt;img src&#x3D;&quot;assets/coldB_1.svg&quot; /&gt;
+    &lt;div *ngFor&#x3D;&quot;let up of userpreferenceList&quot;&gt;
+      &lt;ion-range
+        min&#x3D;&quot;0&quot;
+        max&#x3D;&quot;10&quot;
+        pin&#x3D;&quot;true&quot;
+        class&#x3D;&quot;ion-range&quot;
+        [(ngModel)]&#x3D;&quot;up.Editmoist&quot;
+      &gt;
+        {{up.moist}}
+        &lt;ion-label slot&#x3D;&quot;start&quot;&gt;0&lt;/ion-label&gt;
+        &lt;ion-label slot&#x3D;&quot;end&quot;&gt;10&lt;/ion-label&gt;
+      &lt;/ion-range&gt;
+      &lt;div routerLink&#x3D;&quot;/preference&quot;&gt;
+
+      &lt;ion-button class&#x3D;&quot;sumbit&quot; (click)&#x3D;&quot;UpdateUserpreference(up)&quot;
+        &gt;upadte&lt;/ion-button
+      &gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/ion-card&gt;
+&lt;/ion-content&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./slider-moist.page.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">h1{
+    margin-left: 11%;
+    font-size: 20px;
+  }
+  p{
+    margin-left: 11%;
+    font-size: 15px;
+    margin-right: 11%;
+  }
+
+  .card-title{
+    font-size: 24px;
+    font-weight: lighter;
+    background-color: #9ACAD8;
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .card{
+    width: auto;
+    border-radius: 5%;
+    box-shadow: none;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .ion-range{
+    --knob-background: #D9ECF2;
+    --bar-background-active: #9ACAD8;
+    --bar-height: 6px;
+    --bar-border-radius: 10px;
+  }
+
+  .sumbit{
+    --background: #9acad8;
+    --background-activated: #D9ECF2;
+    --background-hover: #D9ECF2;
+    width: 48%;
+    height: 55px;
+    font-size: 18px;
+    color: black;
+    margin-left: 25%;
+  }
+
+  .back{
+    --color: black;
+  }
+
+  ion-toolbar{
+    --background: #9acad8;
+  }</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ion-header>  <ion-toolbar>    <ion-title></ion-title>    <ion-buttons slot="start">      <ion-back-button        icon="caret-back-outline"        text=""        defaultHref="preference"        class="back"      ></ion-back-button>    </ion-buttons>  </ion-toolbar></ion-header><ion-content>  <h1>How do you feel?</h1>  <p>Move the slider according to how you feel and submit your answer.</p>  <ion-card class="card">    <ion-card-title class="card-title"      >How moist do you think the room is?</ion-card-title    >    <img src="assets/coldB_1.svg" />    <div *ngFor="let up of userpreferenceList">      <ion-range        min="0"        max="10"        pin="true"        class="ion-range"        [(ngModel)]="up.Editmoist"      >        {{up.moist}}        <ion-label slot="start">0</ion-label>        <ion-label slot="end">10</ion-label>      </ion-range>      <div routerLink="/preference">      <ion-button class="sumbit" (click)="UpdateUserpreference(up)"        >upadte</ion-button      >    </div>    </div>  </ion-card></ion-content></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CountdownPage', 'selector': 'app-countdown'},{'name': 'HomePage', 'selector': 'app-home'},{'name': 'LoginPage', 'selector': 'app-login'},{'name': 'PopoverPage', 'selector': 'app-popover'},{'name': 'PreferencePage', 'selector': 'app-preference'},{'name': 'ResultsPage', 'selector': 'app-results'},{'name': 'RoomsPage', 'selector': 'app-rooms'},{'name': 'SetupPage', 'selector': 'app-setup'},{'name': 'SliderAirqialityPage', 'selector': 'app-slider-airqiality'},{'name': 'SliderColdPage', 'selector': 'app-slider-cold'},{'name': 'SliderDryPage', 'selector': 'app-slider-dry'},{'name': 'SliderMoistPage', 'selector': 'app-slider-moist'},{'name': 'SliderWarmPage', 'selector': 'app-slider-warm'},{'name': 'TutorialAcceptPage', 'selector': 'app-tutorial-accept'},{'name': 'TutorialPage', 'selector': 'app-tutorial'},{'name': 'UserpreferencePage', 'selector': 'app-userpreference'},{'name': 'ZonesPage', 'selector': 'app-zones'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'SliderMoistPage'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'SliderMoistPage.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

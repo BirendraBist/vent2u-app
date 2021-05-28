@@ -25,13 +25,13 @@
     <img src="assets/coldB_1.svg" />
     <div *ngFor="let up of userpreferenceList">
       <ion-range
-        min="1"
+        min="0"
         max="10"
         pin="true"
         class="ion-range"
-        [(ngModel)]="up.EditairFlow"
+        [(ngModel)]="up.EditairQuality"
       >
-        {{up.airFlow}}
+        {{up.airQuality}}
         <ion-label slot="start">0</ion-label>
         <ion-label slot="end">10</ion-label>
       </ion-range>

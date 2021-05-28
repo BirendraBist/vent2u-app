@@ -2,9 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Zone } from '../models/Zone.model';
-import { AuthConstant } from './auth-constant';
 
-//const baseUrl = 'http://localhost:8081/api/Zone';
+const baseUrl = 'https://climateindoor.herokuapp.com/api/';
 
 @Injectable({
   providedIn: 'root'
@@ -14,11 +13,11 @@ export class ZoneService {
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<Zone[]> {
-    return this.http.get<Zone[]>(AuthConstant.DOMAIN + 'zone');
+    return this.http.get<Zone[]>(baseUrl + 'zone');
   }
 
   get(id: any): Observable<Zone> {
-    return this.http.get(`${AuthConstant.DOMAIN + 'zone'}/${id}`);
+    return this.http.get(`${baseUrl + 'zone'}/${id}`);
   }
 
   //   create(data: any): Observable<any> {

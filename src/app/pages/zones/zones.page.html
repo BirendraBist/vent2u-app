@@ -1,9 +1,12 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref=""></ion-back-button>
-
-
+      <ion-back-button
+        icon="caret-back-outline"
+        text=""
+        defaultHref="zones"
+        class="back"
+      ></ion-back-button>
     </ion-buttons>
     <ion-title> select the zone</ion-title>
   </ion-toolbar>
@@ -16,7 +19,9 @@
     <ion-grid>
       <ion-row *ngFor="let z of zone">
         <ion-col>
-          <ion-item class="four" (click)="presentPopover($event)"> {{z.zoneName}}</ion-item>
+          <ion-item class="four" (click)="presentPopover($event)">
+            {{z.zoneName}}</ion-item
+          >
           <ion-text>5 people</ion-text>
         </ion-col>
       </ion-row>
@@ -24,7 +29,5 @@
 
     <!-- <ion-button routerLink= "/tutorial">Take the quiz again</ion-button>
     <ion-button routerLink="/preference-history">for history page</ion-button> -->
-
   </div>
-
 </ion-content>

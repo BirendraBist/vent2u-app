@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { CountdownModule } from 'ngx-countdown';
+
 
 import { IonicModule } from '@ionic/angular';
 
@@ -13,7 +15,8 @@ import { CountdownPage } from './countdown.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    CountdownPageRoutingModule
+    CountdownPageRoutingModule,
+    CountdownModule
   ],
   declarations: [CountdownPage]
 })

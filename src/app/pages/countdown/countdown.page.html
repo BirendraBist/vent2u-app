@@ -2,35 +2,24 @@
   <ion-header>
     <ion-toolbar>
       <ion-buttons slot="start">
-        <ion-back-button defaultHref=""></ion-back-button>
+        <ion-back-button
+          icon="caret-back-outline"
+          text=""
+          defaultHref="zones"
+          class="back"
+        ></ion-back-button>
       </ion-buttons>
-      <ion-title> timer/countdown</ion-title>
+      <ion-title>CountDown</ion-title>
     </ion-toolbar>
   </ion-header>
-  <div class="container">
-    <h5>
-      The ventilation system is working on improving the indoor climate based on
-      your answers.
-    </h5>
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <h1>00:10:00</h1>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <h5>Until you can give new answers</h5>
-        </ion-col>
-      </ion-row>
-      <ion-row class="picture">
-        <ion-col>
-          <img src="/assets/Asset 48.svg" />
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </div>
+  <p>
+    The ventilation system is working on improving the indoor climate based on
+    your answers.
+  </p>
 
-  
+  <countdown [config]="{leftTime: 30}" class="countdown"></countdown>
 
+  <h1>Until you can give new answers</h1>
+
+  <img src="assets/Asset 21.svg" />
 </ion-content>

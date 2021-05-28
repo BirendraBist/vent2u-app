@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserPreference } from '../../models/userpreference.model';
-import { FirebaseService } from '../../services/firebase.service';
+import { UserpreferenceService } from '../../services/userPreference.service';
 import { FormGroup, FormBuilder } from '@angular/forms';
 @Component({
   selector: 'app-slider-airqiality',
@@ -14,7 +14,7 @@ export class SliderAirqialityPage implements OnInit {
   userpreferenceList = [];
   userpreferenceForm: FormGroup;
   constructor(
-    private firebaseService: FirebaseService,
+    private userpreferenceService: UserpreferenceService,
     public fb: FormBuilder
   ) {
     this.userpreference = {} as UserPreference
@@ -30,11 +30,10 @@ export class SliderAirqialityPage implements OnInit {
 
     })
 
-    this.firebaseService.read_userpreference().subscribe(data => {
+    this.userpreferenceService.read_userpreference().subscribe(data => {
       this.userpreferenceList = data.map(e => {
         return {
           id: e.payload.doc['id'],
-          isEdit: false,
           cold: e.payload.doc.data()['cold'],
           warm: e.payload.doc.data()['warm'],
           dry: e.payload.doc.data()['dry'],
@@ -57,7 +56,7 @@ export class SliderAirqialityPage implements OnInit {
     let record = {};
     record['airQuality'] = recordRow.EditairQuality;
 
-    this.firebaseService.update_userpreference(recordRow.id, record);
+    this.userpreferenceService.update_userpreference(recordRow.id, record);
     recordRow.isEdit = false;
   }
 

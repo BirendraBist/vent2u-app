@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './guard/auth.guard';
 
 const routes: Routes = [
   {
@@ -26,6 +27,7 @@ const routes: Routes = [
   {
     path: 'rooms',
     loadChildren: () => import('./pages/rooms/rooms.module').then(m => m.RoomsPageModule)
+    , canActivate: [AuthGuard]
   },
   {
     path: 'zones',
@@ -81,13 +83,14 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./pages/login/login.module').then(m => m.LoginPageModule)
   },
-  {
-    path: 'userpreference',
-    loadChildren: () => import('./pages/userpreference/userpreference.module').then(m => m.UserpreferencePageModule)
-  },
+
   {
     path: 'setup',
     loadChildren: () => import('./pages/setup/setup.module').then(m => m.SetupPageModule)
+  },
+  {
+    path: 'preference-history',
+    loadChildren: () => import('./pages/preference-history/preference-history.module').then(m => m.PreferenceHistoryPageModule)
   },
 
 

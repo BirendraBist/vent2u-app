@@ -24,7 +24,7 @@ export class LoginService {
         .then(authState => {
           console.log("Login", authState);
           this.loggedIn.next(true);
-          this.router.navigate(['/rooms']); //
+          this.router.navigate(['/tutorial-accept']); //
 
         })
         .catch(

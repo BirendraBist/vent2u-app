@@ -1,7 +1,12 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref=""></ion-back-button>
+      <ion-back-button
+        icon="caret-back-outline"
+        text=""
+        defaultHref="zones"
+        class="back"
+      ></ion-back-button>
     </ion-buttons>
     <ion-title>login</ion-title>
   </ion-toolbar>
@@ -31,7 +36,7 @@
               *ngIf="form.controls.username.touched 
             && !form.controls.username.valid"
             >
-              Email is required
+              Username is required
             </div>
           </ion-col>
         </ion-row>
@@ -83,8 +88,6 @@
             <ion-button (click)="login()">Login</ion-button>
           </ion-col>
         </ion-row>
-
-        <p>Not an account? <a routerLink="/signup">Signup now</a></p>
 
         <div class="info-text">
           <ion-text>

@@ -114,26 +114,49 @@ export class TutorialPage implements OnInit {
         // are all answers correct?
         if (correctAnswers == correctAnswersNeeded) {
           this.handleCorrectAnswer();
-          console.log('correct answers');
         } else {
           this.handleWrongAnswer();
-          console.log('wrong answers');
         }
       });
     });
   }
   handleCorrectAnswer() {
-    // when correct show next question button
-    this.slides.getActiveIndex().then((index) => {
-      this.slides.length().then((len) => {
-        if (index == len - 1) {
-          this.nextButtonText = 'End quiz';
-        }
-      });
-      this.showNext = true;
+    let checkButton = document.querySelectorAll('#answerCheck');
+    checkButton.forEach((e) => {
+      e.classList.add('rightAnswer');
     });
+    this.checkButtonText = 'Correct answers';
+    setTimeout(() => {
+      checkButton.forEach((e) => {
+        e.classList.remove('rightAnswer');
+      });
+      // show next question button
+      this.slides.getActiveIndex().then((index) => {
+        this.slides.length().then((len) => {
+          if (index == len - 1) {
+            this.nextButtonText = 'End quiz';
+            this.showNext = true;
+          }
+        });
+        //this.showNext = true;
+        this.swipeNext();
+        this.checkButtonText = 'Check Answers';
+      });
+    }, 1500);
   }
-  handleWrongAnswer() {}
+  handleWrongAnswer() {
+    let checkButton = document.querySelectorAll('#answerCheck');
+    checkButton.forEach((e) => {
+      e.classList.add('wrongAnswer');
+    });
+    this.checkButtonText = 'Wrong answers';
+    setTimeout(() => {
+      checkButton.forEach((e) => {
+        e.classList.remove('wrongAnswer');
+      });
+      this.checkButtonText = 'Check Answers';
+    }, 1500);
+  }
 
   ngOnInit() {}
 }

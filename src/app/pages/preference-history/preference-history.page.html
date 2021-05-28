@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button
+        icon="caret-back-outline"
+        text=""
+        defaultHref="zones"
+        class="back"
+      ></ion-back-button>
+    </ion-buttons>
+    <ion-title>preference-history</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button
+          icon="caret-back-outline"
+          text=""
+          defaultHref="zones"
+          class="back"
+        ></ion-back-button>
+      </ion-buttons>
+
+      <ion-title>Preference History</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content [fullscreen]="true">
+    <div class="container">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-card *ngFor="let up of userpreferenceList">
+              <ion-item>
+                <ion-label
+                  >cold<ion-label>{{up.cold}}/10 </ion-label>
+                </ion-label>
+                <ion-label
+                  >warm<ion-label>{{up.warm}}/10</ion-label>
+                </ion-label>
+                <ion-label
+                  >airflow<ion-label>{{up.airFlow}}/10</ion-label>
+                </ion-label>
+                <ion-label>dry<ion-label>{{up.dry}}/10</ion-label> </ion-label>
+                <ion-label
+                  >moist<ion-label>{{up.moist}}/10</ion-label>
+                </ion-label>
+                <button class="btnUse" routerLink="/results" slot="end">
+                  use
+                </button>
+
+                <!-- <ion-button fill="clear" slot="end" (click)="RemoveUserPreference(up.id)"
+                ><ion-icon name="trash-outline"></ion-icon>
+              </ion-button> -->
+              </ion-item>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </ion-content>
+</ion-content>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserPreference } from '../../models/userpreference.model';
-import { FirebaseService } from '../../services/firebase.service';
+import { UserpreferenceService } from '../../services/userPreference.service';
 import { FormGroup, FormBuilder } from '@angular/forms';
 @Component({
   selector: 'app-setup',
@@ -12,7 +12,7 @@ export class SetupPage implements OnInit {
   userpreferenceList = [];
   userpreferenceForm: FormGroup;
   constructor(
-    private firebaseService: FirebaseService,
+    private userpreferenceService: UserpreferenceService,
     public fb: FormBuilder
   ) {
     this.userpreference = {} as UserPreference
@@ -29,7 +29,7 @@ export class SetupPage implements OnInit {
 
 
 
-    this.firebaseService.read_userpreference().subscribe(data => {
+    this.userpreferenceService.read_userpreference().subscribe(data => {
       this.userpreferenceList = data.map(e => {
         return {
           id: e.payload.doc['id'],
@@ -47,7 +47,7 @@ export class SetupPage implements OnInit {
   }
 
   createUserPreference() {
-    this.firebaseService.create_userprefrence(this.userpreferenceForm.value).then(res => {
+    this.userpreferenceService.create_userprefrence(this.userpreferenceForm.value).then(res => {
       this.userpreferenceForm.reset();
     })
       .catch(error => {
@@ -55,7 +55,7 @@ export class SetupPage implements OnInit {
       })
   }
   RemoveUserPreference(rowID) {
-    this.firebaseService.delete_userpreference(rowID);
+    this.userpreferenceService.delete_userpreference(rowID);
   }
   // EditRecord(record) {
   //   record.isEdit = true;
